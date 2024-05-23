@@ -1,0 +1,5 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXAzvhdz8EAx3kAVefz9qmYJ1OheUudgj1on3o5ejTrIJHsoQbt93XJH6cREvS9x4rD0oUVnipwuqDpF0TSWPIAA=
+SHA256 (Pkgfile) = ca1d965dfb7b21475010f21f4874eaadc8063c797127b1db07d4f184cb8c92cf
+SHA256 (.footprint) = 6b73da60c9e81454229b52b2e3845c5234f135be8832403391cc3ee4a3c2d3e5
+SHA256 (musl-obstack-1.2.3.tar.gz) = 9ffb3479b15df0170eba4480e51723c3961dbe0b461ec289744622db03a69395

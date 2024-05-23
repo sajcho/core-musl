@@ -1,0 +1,5 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXGkzduUlJ9fYJEN/3UVyn3KiS6rMPdnQv5Mv0+V8/QWcSjABbmpcpDii8mG9tiaaxDhvgMU43oGfXGNaXTOhMA8=
+SHA256 (Pkgfile) = eae09129f3cf29a439353aa46e5bc3cb324ec473523898916b9c2261aa54b852
+SHA256 (.footprint) = dccacc25ae3ac3a03bd335020e72babf39ceb1c2cae5935e7cba153533fa0251
+SHA256 (mpc-1.3.1.tar.gz) = ab642492f5cf882b74aa0cb730cd410a81edcdbec895183ce930e706c1c759b8
