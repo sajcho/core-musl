@@ -1,0 +1,282 @@
+prt-get: updating /usr/ports/opt-musl/fribidi
+prt-get: starting build Thu May 23 22:37:08 2024
+=======> WARNING: Signature not found, creating new.
+=======> Building '/home/devel/packages/fribidi#1.0.14-1.x86_64.pkg.tar.zst'.
+bsdtar -p -o -C /home/devel/building/work/src -xf /home/devel/sources/fribidi-1.0.14.tar.xz
++ build
++ cd fribidi-1.0.14
++ build-meson -Ddefault_library=both . build
+The Meson build system
+Version: 1.4.0
+Source dir: /home/devel/building/work/src/fribidi-1.0.14
+Build dir: /home/devel/building/work/src/fribidi-1.0.14/build
+Build type: native build
+Project name: fribidi
+Project version: 1.0.14
+C compiler for the host machine: cc (gcc 14.1.0 "cc (SAUX-x86_64 musl) 14.1.0")
+C linker for the host machine: cc ld.bfd 2.42
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Compiler for C supports arguments -ansi: YES 
+Checking for function "memmove" : YES 
+Checking for function "memset" : YES 
+Checking for function "strdup" : YES 
+Has header "stdlib.h" : YES 
+Has header "string.h" : YES 
+Has header "memory.h" : YES 
+Has header "strings.h" : YES 
+Has header "sys/times.h" : YES 
+Has header "strings.h" : YES (cached)
+Configuring config.h using configuration
+Has header "stdlib.h" : YES (cached)
+Has header "string.h" : YES (cached)
+Has header "strings.h" : YES (cached)
+Checking for size of "int" : 4 
+Configuring fribidi-config.h using configuration
+Program test-runner.py found: YES (/home/devel/building/work/src/fribidi-1.0.14/test/test-runner.py)
+Program python3 found: YES (/usr/bin/python3)
+Message: Have pre-generated man pages: true
+Found pkg-config: YES (/usr/bin/pkg-config) 2.2.0
+Build targets in project: 22
+
+fribidi 1.0.14
+
+  User defined options
+    auto_features     : auto
+    bindir            : /usr/bin
+    buildtype         : plain
+    datadir           : /usr/share
+    default_library   : both
+    includedir        : /usr/include
+    libdir            : /usr/lib
+    libexecdir        : /usr/lib
+    localstatedir     : /var
+    mandir            : /usr/share/man
+    prefix            : /usr
+    sbindir           : /usr/sbin
+    sharedstatedir    : /var/lib
+    sysconfdir        : /etc
+    werror            : false
+    wrap_mode         : nodownload
+    python.bytecompile: 0
+    b_lto             : false
+    b_pie             : true
+    b_staticpic       : true
+
+Found ninja-1.9 at /usr/bin/ninja
++ meson compile -j 8 -v -C build
+ninja: entering directory '/home/devel/building/work/src/fribidi-1.0.14/build'
+[1/64] cc -Igen.tab/gen-unicode-version.p -Igen.tab -I../gen.tab -I. -I.. -Ilib -I../lib -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O2 -m64 -march=x86-64 -mtune=generic -fPIE -UHAVE_CONFIG_H -DHAVE_STRINGIZE -DDONT_HAVE_FRIBIDI_CONFIG_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DSTDC_HEADERS=1 -MD -MQ gen.tab/gen-unicode-version.p/gen-unicode-version.c.o -MF gen.tab/gen-unicode-version.p/gen-unicode-version.c.o.d -o gen.tab/gen-unicode-version.p/gen-unicode-version.c.o -c ../gen.tab/gen-unicode-version.c
+[2/64] cc  -o gen.tab/gen-unicode-version gen.tab/gen-unicode-version.p/gen-unicode-version.c.o -Wl,--as-needed -Wl,--no-undefined -pie -O2 -m64 -march=x86-64 -mtune=generic
+[3/64] /usr/bin/meson --internal exe --capture gen.tab/fribidi-unicode-version.h -- /home/devel/building/work/src/fribidi-1.0.14/build/gen.tab/gen-unicode-version ../gen.tab/unidata/ReadMe.txt ../gen.tab/unidata/BidiMirroring.txt gen-unicode-version
+[4/64] cc -Itest/unicode-conformance/BidiCharacterTest.p -Itest/unicode-conformance -I../test/unicode-conformance -I. -I.. -Ilib -I../lib -Igen.tab -I../gen.tab -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIE -DHAVE_CONFIG_H -MD -MQ test/unicode-conformance/BidiCharacterTest.p/BidiCharacterTest.c.o -MF test/unicode-conformance/BidiCharacterTest.p/BidiCharacterTest.c.o.d -o test/unicode-conformance/BidiCharacterTest.p/BidiCharacterTest.c.o -c ../test/unicode-conformance/BidiCharacterTest.c
+[5/64] cc -Itest/unicode-conformance/BidiTest.p -Itest/unicode-conformance -I../test/unicode-conformance -I. -I.. -Ilib -I../lib -Igen.tab -I../gen.tab -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIE -DHAVE_CONFIG_H -MD -MQ test/unicode-conformance/BidiTest.p/BidiTest.c.o -MF test/unicode-conformance/BidiTest.p/BidiTest.c.o.d -o test/unicode-conformance/BidiTest.p/BidiTest.c.o -c ../test/unicode-conformance/BidiTest.c
+[6/64] cc -Ibin/fribidi-caprtl2utf8.p -Ibin -I../bin -I. -I.. -Ilib -I../lib -Igen.tab -I../gen.tab -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIE -DHAVE_CONFIG_H -MD -MQ bin/fribidi-caprtl2utf8.p/fribidi-caprtl2utf8.c.o -MF bin/fribidi-caprtl2utf8.p/fribidi-caprtl2utf8.c.o.d -o bin/fribidi-caprtl2utf8.p/fribidi-caprtl2utf8.c.o -c ../bin/fribidi-caprtl2utf8.c
+[7/64] cc -Ibin/fribidi-bidi-types.p -Ibin -I../bin -I. -I.. -Ilib -I../lib -Igen.tab -I../gen.tab -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIE -DHAVE_CONFIG_H -MD -MQ bin/fribidi-bidi-types.p/fribidi-bidi-types.c.o -MF bin/fribidi-bidi-types.p/fribidi-bidi-types.c.o.d -o bin/fribidi-bidi-types.p/fribidi-bidi-types.c.o -c ../bin/fribidi-bidi-types.c
+[8/64] cc -Ibin/fribidi-benchmark.p -Ibin -I../bin -I. -I.. -Ilib -I../lib -Igen.tab -I../gen.tab -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIE -DHAVE_CONFIG_H -MD -MQ bin/fribidi-benchmark.p/getopt1.c.o -MF bin/fribidi-benchmark.p/getopt1.c.o.d -o bin/fribidi-benchmark.p/getopt1.c.o -c ../bin/getopt1.c
+[9/64] cc -Ibin/fribidi-benchmark.p -Ibin -I../bin -I. -I.. -Ilib -I../lib -Igen.tab -I../gen.tab -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIE -DHAVE_CONFIG_H -MD -MQ bin/fribidi-benchmark.p/getopt.c.o -MF bin/fribidi-benchmark.p/getopt.c.o.d -o bin/fribidi-benchmark.p/getopt.c.o -c ../bin/getopt.c
+[10/64] cc -Ibin/fribidi-benchmark.p -Ibin -I../bin -I. -I.. -Ilib -I../lib -Igen.tab -I../gen.tab -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIE -DHAVE_CONFIG_H -MD -MQ bin/fribidi-benchmark.p/fribidi-benchmark.c.o -MF bin/fribidi-benchmark.p/fribidi-benchmark.c.o.d -o bin/fribidi-benchmark.p/fribidi-benchmark.c.o -c ../bin/fribidi-benchmark.c
+[11/64] cc -Ibin/fribidi.p -Ibin -I../bin -I. -I.. -Ilib -I../lib -Igen.tab -I../gen.tab -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIE -DHAVE_CONFIG_H -MD -MQ bin/fribidi.p/getopt1.c.o -MF bin/fribidi.p/getopt1.c.o.d -o bin/fribidi.p/getopt1.c.o -c ../bin/getopt1.c
+[12/64] cc -Ibin/fribidi.p -Ibin -I../bin -I. -I.. -Ilib -I../lib -Igen.tab -I../gen.tab -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIE -DHAVE_CONFIG_H -MD -MQ bin/fribidi.p/getopt.c.o -MF bin/fribidi.p/getopt.c.o.d -o bin/fribidi.p/getopt.c.o -c ../bin/getopt.c
+[13/64] cc -Ibin/fribidi.p -Ibin -I../bin -I. -I.. -Ilib -I../lib -Igen.tab -I../gen.tab -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIE -DHAVE_CONFIG_H -MD -MQ bin/fribidi.p/fribidi-main.c.o -MF bin/fribidi.p/fribidi-main.c.o.d -o bin/fribidi.p/fribidi-main.c.o -c ../bin/fribidi-main.c
+[14/64] cc -Igen.tab/gen-brackets-type-tab.p -Igen.tab -I../gen.tab -I. -I.. -Ilib -I../lib -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O2 -m64 -march=x86-64 -mtune=generic -fPIE -UHAVE_CONFIG_H -DHAVE_STRINGIZE -DDONT_HAVE_FRIBIDI_CONFIG_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DSTDC_HEADERS=1 -MD -MQ gen.tab/gen-brackets-type-tab.p/packtab.c.o -MF gen.tab/gen-brackets-type-tab.p/packtab.c.o.d -o gen.tab/gen-brackets-type-tab.p/packtab.c.o -c ../gen.tab/packtab.c
+[01m[K../bin/fribidi-caprtl2utf8.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../bin/fribidi-caprtl2utf8.c:23:7:[m[K [01;35m[Kwarning: [m[K'[01m[Kstrncpy[m[K' output may be truncated copying 5 bytes from a string of length 1023 [[01;35m[K-Wstringop-truncation[m[K]
+   23 |       [01;35m[Kstrncpy (eol, buf + len, sizeof eol)[m[K;
+      |       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[15/64] cc -Igen.tab/gen-brackets-type-tab.p -Igen.tab -I../gen.tab -I. -I.. -Ilib -I../lib -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O2 -m64 -march=x86-64 -mtune=generic -fPIE -UHAVE_CONFIG_H -DHAVE_STRINGIZE -DDONT_HAVE_FRIBIDI_CONFIG_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DSTDC_HEADERS=1 -MD -MQ gen.tab/gen-brackets-type-tab.p/gen-brackets-type-tab.c.o -MF gen.tab/gen-brackets-type-tab.p/gen-brackets-type-tab.c.o.d -o gen.tab/gen-brackets-type-tab.p/gen-brackets-type-tab.c.o -c ../gen.tab/gen-brackets-type-tab.c
+[16/64] cc -Igen.tab/gen-brackets-tab.p -Igen.tab -I../gen.tab -I. -I.. -Ilib -I../lib -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O2 -m64 -march=x86-64 -mtune=generic -fPIE -UHAVE_CONFIG_H -DHAVE_STRINGIZE -DDONT_HAVE_FRIBIDI_CONFIG_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DSTDC_HEADERS=1 -MD -MQ gen.tab/gen-brackets-tab.p/packtab.c.o -MF gen.tab/gen-brackets-tab.p/packtab.c.o.d -o gen.tab/gen-brackets-tab.p/packtab.c.o -c ../gen.tab/packtab.c
+[17/64] cc -Igen.tab/gen-brackets-tab.p -Igen.tab -I../gen.tab -I. -I.. -Ilib -I../lib -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O2 -m64 -march=x86-64 -mtune=generic -fPIE -UHAVE_CONFIG_H -DHAVE_STRINGIZE -DDONT_HAVE_FRIBIDI_CONFIG_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DSTDC_HEADERS=1 -MD -MQ gen.tab/gen-brackets-tab.p/gen-brackets-tab.c.o -MF gen.tab/gen-brackets-tab.p/gen-brackets-tab.c.o.d -o gen.tab/gen-brackets-tab.p/gen-brackets-tab.c.o -c ../gen.tab/gen-brackets-tab.c
+[18/64] cc -Igen.tab/gen-mirroring-tab.p -Igen.tab -I../gen.tab -I. -I.. -Ilib -I../lib -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O2 -m64 -march=x86-64 -mtune=generic -fPIE -UHAVE_CONFIG_H -DHAVE_STRINGIZE -DDONT_HAVE_FRIBIDI_CONFIG_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DSTDC_HEADERS=1 -MD -MQ gen.tab/gen-mirroring-tab.p/packtab.c.o -MF gen.tab/gen-mirroring-tab.p/packtab.c.o.d -o gen.tab/gen-mirroring-tab.p/packtab.c.o -c ../gen.tab/packtab.c
+[19/64] cc -Igen.tab/gen-mirroring-tab.p -Igen.tab -I../gen.tab -I. -I.. -Ilib -I../lib -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O2 -m64 -march=x86-64 -mtune=generic -fPIE -UHAVE_CONFIG_H -DHAVE_STRINGIZE -DDONT_HAVE_FRIBIDI_CONFIG_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DSTDC_HEADERS=1 -MD -MQ gen.tab/gen-mirroring-tab.p/gen-mirroring-tab.c.o -MF gen.tab/gen-mirroring-tab.p/gen-mirroring-tab.c.o.d -o gen.tab/gen-mirroring-tab.p/gen-mirroring-tab.c.o -c ../gen.tab/gen-mirroring-tab.c
+[20/64] cc -Igen.tab/gen-arabic-shaping-tab.p -Igen.tab -I../gen.tab -I. -I.. -Ilib -I../lib -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O2 -m64 -march=x86-64 -mtune=generic -fPIE -UHAVE_CONFIG_H -DHAVE_STRINGIZE -DDONT_HAVE_FRIBIDI_CONFIG_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DSTDC_HEADERS=1 -MD -MQ gen.tab/gen-arabic-shaping-tab.p/packtab.c.o -MF gen.tab/gen-arabic-shaping-tab.p/packtab.c.o.d -o gen.tab/gen-arabic-shaping-tab.p/packtab.c.o -c ../gen.tab/packtab.c
+[21/64] cc -Igen.tab/gen-arabic-shaping-tab.p -Igen.tab -I../gen.tab -I. -I.. -Ilib -I../lib -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O2 -m64 -march=x86-64 -mtune=generic -fPIE -UHAVE_CONFIG_H -DHAVE_STRINGIZE -DDONT_HAVE_FRIBIDI_CONFIG_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DSTDC_HEADERS=1 -MD -MQ gen.tab/gen-arabic-shaping-tab.p/gen-arabic-shaping-tab.c.o -MF gen.tab/gen-arabic-shaping-tab.p/gen-arabic-shaping-tab.c.o.d -o gen.tab/gen-arabic-shaping-tab.p/gen-arabic-shaping-tab.c.o -c ../gen.tab/gen-arabic-shaping-tab.c
+[22/64] cc -Igen.tab/gen-joining-type-tab.p -Igen.tab -I../gen.tab -I. -I.. -Ilib -I../lib -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O2 -m64 -march=x86-64 -mtune=generic -fPIE -UHAVE_CONFIG_H -DHAVE_STRINGIZE -DDONT_HAVE_FRIBIDI_CONFIG_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DSTDC_HEADERS=1 -MD -MQ gen.tab/gen-joining-type-tab.p/packtab.c.o -MF gen.tab/gen-joining-type-tab.p/packtab.c.o.d -o gen.tab/gen-joining-type-tab.p/packtab.c.o -c ../gen.tab/packtab.c
+[23/64] cc -Igen.tab/gen-joining-type-tab.p -Igen.tab -I../gen.tab -I. -I.. -Ilib -I../lib -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O2 -m64 -march=x86-64 -mtune=generic -fPIE -UHAVE_CONFIG_H -DHAVE_STRINGIZE -DDONT_HAVE_FRIBIDI_CONFIG_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DSTDC_HEADERS=1 -MD -MQ gen.tab/gen-joining-type-tab.p/gen-joining-type-tab.c.o -MF gen.tab/gen-joining-type-tab.p/gen-joining-type-tab.c.o.d -o gen.tab/gen-joining-type-tab.p/gen-joining-type-tab.c.o -c ../gen.tab/gen-joining-type-tab.c
+[24/64] cc -Igen.tab/gen-bidi-type-tab.p -Igen.tab -I../gen.tab -I. -I.. -Ilib -I../lib -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O2 -m64 -march=x86-64 -mtune=generic -fPIE -UHAVE_CONFIG_H -DHAVE_STRINGIZE -DDONT_HAVE_FRIBIDI_CONFIG_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DSTDC_HEADERS=1 -MD -MQ gen.tab/gen-bidi-type-tab.p/packtab.c.o -MF gen.tab/gen-bidi-type-tab.p/packtab.c.o.d -o gen.tab/gen-bidi-type-tab.p/packtab.c.o -c ../gen.tab/packtab.c
+[25/64] cc  -o gen.tab/gen-brackets-type-tab gen.tab/gen-brackets-type-tab.p/gen-brackets-type-tab.c.o gen.tab/gen-brackets-type-tab.p/packtab.c.o -Wl,--as-needed -Wl,--no-undefined -pie -O2 -m64 -march=x86-64 -mtune=generic
+[26/64] /usr/bin/meson --internal exe --capture gen.tab/brackets-type.tab.i -- /home/devel/building/work/src/fribidi-1.0.14/build/gen.tab/gen-brackets-type-tab 2 ../gen.tab/unidata/BidiBrackets.txt gen-brackets-type-tab
+[01m[K../gen.tab/gen-arabic-shaping-tab.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../gen.tab/gen-arabic-shaping-tab.c:278:1:[m[K [01;35m[Kwarning: [m[K'[01m[K%s[m[K' directive argument is null [[01;35m[K-Wformat-overflow=[m[K]
+  278 | [01;35m[Kmain[m[K (
+      | [01;35m[K^~~~[m[K
+[27/64] cc -Igen.tab/gen-bidi-type-tab.p -Igen.tab -I../gen.tab -I. -I.. -Ilib -I../lib -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O2 -m64 -march=x86-64 -mtune=generic -fPIE -UHAVE_CONFIG_H -DHAVE_STRINGIZE -DDONT_HAVE_FRIBIDI_CONFIG_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DSTDC_HEADERS=1 -MD -MQ gen.tab/gen-bidi-type-tab.p/gen-bidi-type-tab.c.o -MF gen.tab/gen-bidi-type-tab.p/gen-bidi-type-tab.c.o.d -o gen.tab/gen-bidi-type-tab.p/gen-bidi-type-tab.c.o -c ../gen.tab/gen-bidi-type-tab.c
+[28/64] cc  -o gen.tab/gen-brackets-tab gen.tab/gen-brackets-tab.p/gen-brackets-tab.c.o gen.tab/gen-brackets-tab.p/packtab.c.o -Wl,--as-needed -Wl,--no-undefined -pie -O2 -m64 -march=x86-64 -mtune=generic
+[29/64] /usr/bin/meson --internal exe --capture gen.tab/brackets.tab.i -- /home/devel/building/work/src/fribidi-1.0.14/build/gen.tab/gen-brackets-tab 2 ../gen.tab/unidata/BidiBrackets.txt ../gen.tab/unidata/UnicodeData.txt gen-brackets-tab
+[30/64] cc  -o gen.tab/gen-mirroring-tab gen.tab/gen-mirroring-tab.p/gen-mirroring-tab.c.o gen.tab/gen-mirroring-tab.p/packtab.c.o -Wl,--as-needed -Wl,--no-undefined -pie -O2 -m64 -march=x86-64 -mtune=generic
+[31/64] /usr/bin/meson --internal exe --capture gen.tab/mirroring.tab.i -- /home/devel/building/work/src/fribidi-1.0.14/build/gen.tab/gen-mirroring-tab 2 ../gen.tab/unidata/BidiMirroring.txt gen-mirroring-tab
+[32/64] cc  -o gen.tab/gen-arabic-shaping-tab gen.tab/gen-arabic-shaping-tab.p/gen-arabic-shaping-tab.c.o gen.tab/gen-arabic-shaping-tab.p/packtab.c.o -Wl,--as-needed -Wl,--no-undefined -pie -O2 -m64 -march=x86-64 -mtune=generic
+[33/64] /usr/bin/meson --internal exe --capture gen.tab/arabic-shaping.tab.i -- /home/devel/building/work/src/fribidi-1.0.14/build/gen.tab/gen-arabic-shaping-tab 2 ../gen.tab/unidata/UnicodeData.txt gen-arabic-shaping-tab
+[34/64] cc  -o gen.tab/gen-joining-type-tab gen.tab/gen-joining-type-tab.p/gen-joining-type-tab.c.o gen.tab/gen-joining-type-tab.p/packtab.c.o -Wl,--as-needed -Wl,--no-undefined -pie -O2 -m64 -march=x86-64 -mtune=generic
+[35/64] /usr/bin/meson --internal exe --capture gen.tab/joining-type.tab.i -- /home/devel/building/work/src/fribidi-1.0.14/build/gen.tab/gen-joining-type-tab 2 ../gen.tab/unidata/UnicodeData.txt ../gen.tab/unidata/ArabicShaping.txt gen-joining-type-tab
+[36/64] cc  -o gen.tab/gen-bidi-type-tab gen.tab/gen-bidi-type-tab.p/gen-bidi-type-tab.c.o gen.tab/gen-bidi-type-tab.p/packtab.c.o -Wl,--as-needed -Wl,--no-undefined -pie -O2 -m64 -march=x86-64 -mtune=generic
+[37/64] /usr/bin/meson --internal exe --capture gen.tab/bidi-type.tab.i -- /home/devel/building/work/src/fribidi-1.0.14/build/gen.tab/gen-bidi-type-tab 2 ../gen.tab/unidata/UnicodeData.txt gen-bidi-type-tab
+[38/64] cc -Ilib/libfribidi.so.0.4.0.p -Ilib -I../lib -I. -I.. -Igen.tab -I../gen.tab -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIC -DHAVE_CONFIG_H -MD -MQ lib/libfribidi.so.0.4.0.p/fribidi-shape.c.o -MF lib/libfribidi.so.0.4.0.p/fribidi-shape.c.o.d -o lib/libfribidi.so.0.4.0.p/fribidi-shape.c.o -c ../lib/fribidi-shape.c
+[39/64] cc -Ilib/libfribidi.so.0.4.0.p -Ilib -I../lib -I. -I.. -Igen.tab -I../gen.tab -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIC -DHAVE_CONFIG_H -MD -MQ lib/libfribidi.so.0.4.0.p/fribidi-run.c.o -MF lib/libfribidi.so.0.4.0.p/fribidi-run.c.o.d -o lib/libfribidi.so.0.4.0.p/fribidi-run.c.o -c ../lib/fribidi-run.c
+[40/64] cc -Ilib/libfribidi.so.0.4.0.p -Ilib -I../lib -I. -I.. -Igen.tab -I../gen.tab -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIC -DHAVE_CONFIG_H -MD -MQ lib/libfribidi.so.0.4.0.p/fribidi-brackets.c.o -MF lib/libfribidi.so.0.4.0.p/fribidi-brackets.c.o.d -o lib/libfribidi.so.0.4.0.p/fribidi-brackets.c.o -c ../lib/fribidi-brackets.c
+[41/64] cc -Ilib/libfribidi.so.0.4.0.p -Ilib -I../lib -I. -I.. -Igen.tab -I../gen.tab -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIC -DHAVE_CONFIG_H -MD -MQ lib/libfribidi.so.0.4.0.p/fribidi-mirroring.c.o -MF lib/libfribidi.so.0.4.0.p/fribidi-mirroring.c.o.d -o lib/libfribidi.so.0.4.0.p/fribidi-mirroring.c.o -c ../lib/fribidi-mirroring.c
+[42/64] cc -Ilib/libfribidi.so.0.4.0.p -Ilib -I../lib -I. -I.. -Igen.tab -I../gen.tab -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIC -DHAVE_CONFIG_H -MD -MQ lib/libfribidi.so.0.4.0.p/fribidi-joining-types.c.o -MF lib/libfribidi.so.0.4.0.p/fribidi-joining-types.c.o.d -o lib/libfribidi.so.0.4.0.p/fribidi-joining-types.c.o -c ../lib/fribidi-joining-types.c
+[43/64] cc -Ilib/libfribidi.so.0.4.0.p -Ilib -I../lib -I. -I.. -Igen.tab -I../gen.tab -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIC -DHAVE_CONFIG_H -MD -MQ lib/libfribidi.so.0.4.0.p/fribidi-joining.c.o -MF lib/libfribidi.so.0.4.0.p/fribidi-joining.c.o.d -o lib/libfribidi.so.0.4.0.p/fribidi-joining.c.o -c ../lib/fribidi-joining.c
+[44/64] cc -Ilib/libfribidi.so.0.4.0.p -Ilib -I../lib -I. -I.. -Igen.tab -I../gen.tab -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIC -DHAVE_CONFIG_H -MD -MQ lib/libfribidi.so.0.4.0.p/fribidi-deprecated.c.o -MF lib/libfribidi.so.0.4.0.p/fribidi-deprecated.c.o.d -o lib/libfribidi.so.0.4.0.p/fribidi-deprecated.c.o -c ../lib/fribidi-deprecated.c
+[45/64] cc -Ilib/libfribidi.so.0.4.0.p -Ilib -I../lib -I. -I.. -Igen.tab -I../gen.tab -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIC -DHAVE_CONFIG_H -MD -MQ lib/libfribidi.so.0.4.0.p/fribidi-char-sets-utf8.c.o -MF lib/libfribidi.so.0.4.0.p/fribidi-char-sets-utf8.c.o.d -o lib/libfribidi.so.0.4.0.p/fribidi-char-sets-utf8.c.o -c ../lib/fribidi-char-sets-utf8.c
+[46/64] cc -Ilib/libfribidi.so.0.4.0.p -Ilib -I../lib -I. -I.. -Igen.tab -I../gen.tab -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIC -DHAVE_CONFIG_H -MD -MQ lib/libfribidi.so.0.4.0.p/fribidi-char-sets-iso8859-8.c.o -MF lib/libfribidi.so.0.4.0.p/fribidi-char-sets-iso8859-8.c.o.d -o lib/libfribidi.so.0.4.0.p/fribidi-char-sets-iso8859-8.c.o -c ../lib/fribidi-char-sets-iso8859-8.c
+[47/64] cc -Ilib/libfribidi.so.0.4.0.p -Ilib -I../lib -I. -I.. -Igen.tab -I../gen.tab -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIC -DHAVE_CONFIG_H -MD -MQ lib/libfribidi.so.0.4.0.p/fribidi-char-sets-iso8859-6.c.o -MF lib/libfribidi.so.0.4.0.p/fribidi-char-sets-iso8859-6.c.o.d -o lib/libfribidi.so.0.4.0.p/fribidi-char-sets-iso8859-6.c.o -c ../lib/fribidi-char-sets-iso8859-6.c
+[48/64] cc -Ilib/libfribidi.so.0.4.0.p -Ilib -I../lib -I. -I.. -Igen.tab -I../gen.tab -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIC -DHAVE_CONFIG_H -MD -MQ lib/libfribidi.so.0.4.0.p/fribidi-char-sets-cp1256.c.o -MF lib/libfribidi.so.0.4.0.p/fribidi-char-sets-cp1256.c.o.d -o lib/libfribidi.so.0.4.0.p/fribidi-char-sets-cp1256.c.o -c ../lib/fribidi-char-sets-cp1256.c
+[49/64] cc -Ilib/libfribidi.so.0.4.0.p -Ilib -I../lib -I. -I.. -Igen.tab -I../gen.tab -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIC -DHAVE_CONFIG_H -MD -MQ lib/libfribidi.so.0.4.0.p/fribidi-char-sets-cp1255.c.o -MF lib/libfribidi.so.0.4.0.p/fribidi-char-sets-cp1255.c.o.d -o lib/libfribidi.so.0.4.0.p/fribidi-char-sets-cp1255.c.o -c ../lib/fribidi-char-sets-cp1255.c
+[50/64] cc -Ilib/libfribidi.so.0.4.0.p -Ilib -I../lib -I. -I.. -Igen.tab -I../gen.tab -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIC -DHAVE_CONFIG_H -MD -MQ lib/libfribidi.so.0.4.0.p/fribidi-char-sets-cap-rtl.c.o -MF lib/libfribidi.so.0.4.0.p/fribidi-char-sets-cap-rtl.c.o.d -o lib/libfribidi.so.0.4.0.p/fribidi-char-sets-cap-rtl.c.o -c ../lib/fribidi-char-sets-cap-rtl.c
+[51/64] cc -Ilib/libfribidi.so.0.4.0.p -Ilib -I../lib -I. -I.. -Igen.tab -I../gen.tab -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIC -DHAVE_CONFIG_H -MD -MQ lib/libfribidi.so.0.4.0.p/fribidi-char-sets.c.o -MF lib/libfribidi.so.0.4.0.p/fribidi-char-sets.c.o.d -o lib/libfribidi.so.0.4.0.p/fribidi-char-sets.c.o -c ../lib/fribidi-char-sets.c
+[52/64] cc -Ilib/libfribidi.so.0.4.0.p -Ilib -I../lib -I. -I.. -Igen.tab -I../gen.tab -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIC -DHAVE_CONFIG_H -MD -MQ lib/libfribidi.so.0.4.0.p/fribidi-bidi-types.c.o -MF lib/libfribidi.so.0.4.0.p/fribidi-bidi-types.c.o.d -o lib/libfribidi.so.0.4.0.p/fribidi-bidi-types.c.o -c ../lib/fribidi-bidi-types.c
+[53/64] cc -Ilib/libfribidi.so.0.4.0.p -Ilib -I../lib -I. -I.. -Igen.tab -I../gen.tab -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIC -DHAVE_CONFIG_H -MD -MQ lib/libfribidi.so.0.4.0.p/fribidi-bidi.c.o -MF lib/libfribidi.so.0.4.0.p/fribidi-bidi.c.o.d -o lib/libfribidi.so.0.4.0.p/fribidi-bidi.c.o -c ../lib/fribidi-bidi.c
+[54/64] cc -Ilib/libfribidi.so.0.4.0.p -Ilib -I../lib -I. -I.. -Igen.tab -I../gen.tab -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIC -DHAVE_CONFIG_H -MD -MQ lib/libfribidi.so.0.4.0.p/fribidi-arabic.c.o -MF lib/libfribidi.so.0.4.0.p/fribidi-arabic.c.o.d -o lib/libfribidi.so.0.4.0.p/fribidi-arabic.c.o -c ../lib/fribidi-arabic.c
+[55/64] cc -Ilib/libfribidi.so.0.4.0.p -Ilib -I../lib -I. -I.. -Igen.tab -I../gen.tab -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -ansi -O2 -m64 -march=x86-64 -mtune=generic -fPIC -DHAVE_CONFIG_H -MD -MQ lib/libfribidi.so.0.4.0.p/fribidi.c.o -MF lib/libfribidi.so.0.4.0.p/fribidi.c.o.d -o lib/libfribidi.so.0.4.0.p/fribidi.c.o -c ../lib/fribidi.c
+[01m[K../lib/fribidi.c:[m[K In function '[01m[Kfribidi_log2vis[m[K':
+[01m[K../lib/fribidi.c:245:7:[m[K [01;35m[Kwarning: [m[K'[01m[Kmemcpy[m[K' specified bound between 18446744065119617024 and 18446744073709551612 exceeds maximum object size 9223372036854775807 [[01;35m[K-Wstringop-overflow=[m[K]
+  245 |       [01;35m[Kmemcpy (visual_str, str, len * sizeof (*visual_str))[m[K;
+      |       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[56/64] rm -f lib/libfribidi.a && gcc-ar csrD lib/libfribidi.a lib/libfribidi.so.0.4.0.p/fribidi.c.o lib/libfribidi.so.0.4.0.p/fribidi-arabic.c.o lib/libfribidi.so.0.4.0.p/fribidi-bidi.c.o lib/libfribidi.so.0.4.0.p/fribidi-bidi-types.c.o lib/libfribidi.so.0.4.0.p/fribidi-char-sets.c.o lib/libfribidi.so.0.4.0.p/fribidi-char-sets-cap-rtl.c.o lib/libfribidi.so.0.4.0.p/fribidi-char-sets-cp1255.c.o lib/libfribidi.so.0.4.0.p/fribidi-char-sets-cp1256.c.o lib/libfribidi.so.0.4.0.p/fribidi-char-sets-iso8859-6.c.o lib/libfribidi.so.0.4.0.p/fribidi-char-sets-iso8859-8.c.o lib/libfribidi.so.0.4.0.p/fribidi-char-sets-utf8.c.o lib/libfribidi.so.0.4.0.p/fribidi-deprecated.c.o lib/libfribidi.so.0.4.0.p/fribidi-joining.c.o lib/libfribidi.so.0.4.0.p/fribidi-joining-types.c.o lib/libfribidi.so.0.4.0.p/fribidi-mirroring.c.o lib/libfribidi.so.0.4.0.p/fribidi-brackets.c.o lib/libfribidi.so.0.4.0.p/fribidi-run.c.o lib/libfribidi.so.0.4.0.p/fribidi-shape.c.o
+[57/64] cc  -o lib/libfribidi.so.0.4.0 lib/libfribidi.so.0.4.0.p/fribidi.c.o lib/libfribidi.so.0.4.0.p/fribidi-arabic.c.o lib/libfribidi.so.0.4.0.p/fribidi-bidi.c.o lib/libfribidi.so.0.4.0.p/fribidi-bidi-types.c.o lib/libfribidi.so.0.4.0.p/fribidi-char-sets.c.o lib/libfribidi.so.0.4.0.p/fribidi-char-sets-cap-rtl.c.o lib/libfribidi.so.0.4.0.p/fribidi-char-sets-cp1255.c.o lib/libfribidi.so.0.4.0.p/fribidi-char-sets-cp1256.c.o lib/libfribidi.so.0.4.0.p/fribidi-char-sets-iso8859-6.c.o lib/libfribidi.so.0.4.0.p/fribidi-char-sets-iso8859-8.c.o lib/libfribidi.so.0.4.0.p/fribidi-char-sets-utf8.c.o lib/libfribidi.so.0.4.0.p/fribidi-deprecated.c.o lib/libfribidi.so.0.4.0.p/fribidi-joining.c.o lib/libfribidi.so.0.4.0.p/fribidi-joining-types.c.o lib/libfribidi.so.0.4.0.p/fribidi-mirroring.c.o lib/libfribidi.so.0.4.0.p/fribidi-brackets.c.o lib/libfribidi.so.0.4.0.p/fribidi-run.c.o lib/libfribidi.so.0.4.0.p/fribidi-shape.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libfribidi.so.0 -O2 -m64 -march=x86-64 -mtune=generic
+[58/64] /usr/bin/meson --internal symbolextractor /home/devel/building/work/src/fribidi-1.0.14/build lib/libfribidi.so.0.4.0 lib/libfribidi.so.0.4.0 lib/libfribidi.so.0.4.0.p/libfribidi.so.0.4.0.symbols 
+[59/64] cc  -o test/unicode-conformance/BidiCharacterTest test/unicode-conformance/BidiCharacterTest.p/BidiCharacterTest.c.o -Wl,--as-needed -Wl,--no-undefined -pie -O2 -m64 -march=x86-64 -mtune=generic '-Wl,-rpath,$ORIGIN/../../lib' -Wl,-rpath-link,/home/devel/building/work/src/fribidi-1.0.14/build/lib lib/libfribidi.so.0.4.0
+[60/64] cc  -o test/unicode-conformance/BidiTest test/unicode-conformance/BidiTest.p/BidiTest.c.o -Wl,--as-needed -Wl,--no-undefined -pie -O2 -m64 -march=x86-64 -mtune=generic '-Wl,-rpath,$ORIGIN/../../lib' -Wl,-rpath-link,/home/devel/building/work/src/fribidi-1.0.14/build/lib lib/libfribidi.so.0.4.0
+[61/64] cc  -o bin/fribidi-caprtl2utf8 bin/fribidi-caprtl2utf8.p/fribidi-caprtl2utf8.c.o -Wl,--as-needed -Wl,--no-undefined -pie -O2 -m64 -march=x86-64 -mtune=generic '-Wl,-rpath,$ORIGIN/../lib' -Wl,-rpath-link,/home/devel/building/work/src/fribidi-1.0.14/build/lib lib/libfribidi.so.0.4.0
+[62/64] cc  -o bin/fribidi-bidi-types bin/fribidi-bidi-types.p/fribidi-bidi-types.c.o -Wl,--as-needed -Wl,--no-undefined -pie -O2 -m64 -march=x86-64 -mtune=generic '-Wl,-rpath,$ORIGIN/../lib' -Wl,-rpath-link,/home/devel/building/work/src/fribidi-1.0.14/build/lib lib/libfribidi.so.0.4.0
+[63/64] cc  -o bin/fribidi-benchmark bin/fribidi-benchmark.p/fribidi-benchmark.c.o bin/fribidi-benchmark.p/getopt.c.o bin/fribidi-benchmark.p/getopt1.c.o -Wl,--as-needed -Wl,--no-undefined -pie -O2 -m64 -march=x86-64 -mtune=generic '-Wl,-rpath,$ORIGIN/../lib' -Wl,-rpath-link,/home/devel/building/work/src/fribidi-1.0.14/build/lib lib/libfribidi.so.0.4.0
+[64/64] cc  -o bin/fribidi bin/fribidi.p/fribidi-main.c.o bin/fribidi.p/getopt.c.o bin/fribidi.p/getopt1.c.o -Wl,--as-needed -Wl,--no-undefined -pie -O2 -m64 -march=x86-64 -mtune=generic '-Wl,-rpath,$ORIGIN/../lib' -Wl,-rpath-link,/home/devel/building/work/src/fribidi-1.0.14/build/lib lib/libfribidi.so.0.4.0
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /usr/bin/ninja -C /home/devel/building/work/src/fribidi-1.0.14/build -j 8 -v
++ DESTDIR=/home/devel/building/work/pkg
++ meson install --no-rebuild -C build
+Installing gen.tab/fribidi-unicode-version.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing lib/libfribidi.so.0.4.0 to /home/devel/building/work/pkg/usr/lib
+Installing lib/libfribidi.a to /home/devel/building/work/pkg/usr/lib
+Installing bin/fribidi to /home/devel/building/work/pkg/usr/bin
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-arabic.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-begindecls.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-bidi.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-bidi-types.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-bidi-types-list.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-char-sets.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-char-sets-list.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-common.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-deprecated.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-enddecls.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-flags.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-joining.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-joining-types.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-joining-types-list.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-mirroring.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-brackets.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-shape.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-types.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi-unicode.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/lib/fribidi.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_charset_to_unicode.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_debug_status.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_get_bidi_type.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_get_bidi_type_name.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_get_bidi_types.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_get_bracket.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_get_bracket_types.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_get_joining_type.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_get_joining_type_name.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_get_joining_types.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_get_mirror_char.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_get_par_direction.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_get_par_embedding_levels.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_get_par_embedding_levels_ex.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_get_type.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_get_type_internal.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_join_arabic.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_log2vis.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_log2vis_get_embedding_levels.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_mirroring_status.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_parse_charset.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_remove_bidi_marks.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_reorder_line.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_reorder_nsm_status.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_set_debug.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_set_mirroring.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_set_reorder_nsm.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_shape.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_shape_arabic.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_shape_mirroring.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/doc/fribidi_unicode_to_charset.3 to /home/devel/building/work/pkg/usr/share/man/man3
+Installing /home/devel/building/work/src/fribidi-1.0.14/build/lib/fribidi-config.h to /home/devel/building/work/pkg/usr/include/fribidi
+Installing /home/devel/building/work/src/fribidi-1.0.14/build/meson-private/fribidi.pc to /home/devel/building/work/pkg/usr/lib/pkgconfig
+Installing symlink pointing to libfribidi.so.0.4.0 to /home/devel/building/work/pkg/usr/lib/libfribidi.so.0
+Installing symlink pointing to libfribidi.so.0 to /home/devel/building/work/pkg/usr/lib/libfribidi.so
+=======> Build result:
+drwxr-xr-x  0 root   root        0 May 23 22:37 usr/
+drwxr-xr-x  0 root   root        0 May 23 22:37 usr/include/
+drwxr-xr-x  0 root   root        0 May 23 22:37 usr/lib/
+drwxr-xr-x  0 root   root        0 May 23 22:37 usr/bin/
+drwxr-xr-x  0 root   root        0 May 23 22:37 usr/share/
+drwxr-xr-x  0 root   root        0 May 23 22:37 usr/share/man/
+drwxr-xr-x  0 root   root        0 May 23 22:37 usr/share/man/man3/
+-rw-r--r--  0 root   root      912 Apr 25 05:41 usr/share/man/man3/fribidi_charset_to_unicode.3.gz
+-rw-r--r--  0 root   root      528 Apr 25 05:41 usr/share/man/man3/fribidi_debug_status.3.gz
+-rw-r--r--  0 root   root      810 Apr 25 05:41 usr/share/man/man3/fribidi_get_bidi_type.3.gz
+-rw-r--r--  0 root   root      822 Apr 25 05:41 usr/share/man/man3/fribidi_get_bidi_type_name.3.gz
+-rw-r--r--  0 root   root      734 Apr 25 05:41 usr/share/man/man3/fribidi_get_bidi_types.3.gz
+-rw-r--r--  0 root   root      805 Apr 25 05:41 usr/share/man/man3/fribidi_get_bracket.3.gz
+-rw-r--r--  0 root   root      759 Apr 25 05:41 usr/share/man/man3/fribidi_get_bracket_types.3.gz
+-rw-r--r--  0 root   root     1028 Apr 25 05:41 usr/share/man/man3/fribidi_get_joining_type.3.gz
+-rw-r--r--  0 root   root      976 Apr 25 05:41 usr/share/man/man3/fribidi_get_joining_type_name.3.gz
+-rw-r--r--  0 root   root      927 Apr 25 05:41 usr/share/man/man3/fribidi_get_joining_types.3.gz
+-rw-r--r--  0 root   root      796 Apr 25 05:41 usr/share/man/man3/fribidi_get_mirror_char.3.gz
+-rw-r--r--  0 root   root     1183 Apr 25 05:41 usr/share/man/man3/fribidi_get_par_direction.3.gz
+-rw-r--r--  0 root   root      953 Apr 25 05:41 usr/share/man/man3/fribidi_get_par_embedding_levels.3.gz
+-rw-r--r--  0 root   root     1224 Apr 25 05:41 usr/share/man/man3/fribidi_get_par_embedding_levels_ex.3.gz
+-rw-r--r--  0 root   root      631 Apr 25 05:41 usr/share/man/man3/fribidi_get_type.3.gz
+-rw-r--r--  0 root   root      638 Apr 25 05:41 usr/share/man/man3/fribidi_get_type_internal.3.gz
+-rw-r--r--  0 root   root     1145 Apr 25 05:41 usr/share/man/man3/fribidi_join_arabic.3.gz
+-rw-r--r--  0 root   root     1251 Apr 25 05:41 usr/share/man/man3/fribidi_log2vis.3.gz
+-rw-r--r--  0 root   root      933 Apr 25 05:41 usr/share/man/man3/fribidi_log2vis_get_embedding_levels.3.gz
+-rw-r--r--  0 root   root      568 Apr 25 05:41 usr/share/man/man3/fribidi_mirroring_status.3.gz
+-rw-r--r--  0 root   root      819 Apr 25 05:41 usr/share/man/man3/fribidi_parse_charset.3.gz
+-rw-r--r--  0 root   root     1180 Apr 25 05:41 usr/share/man/man3/fribidi_remove_bidi_marks.3.gz
+-rw-r--r--  0 root   root     1729 Apr 25 05:41 usr/share/man/man3/fribidi_reorder_line.3.gz
+-rw-r--r--  0 root   root      578 Apr 25 05:41 usr/share/man/man3/fribidi_reorder_nsm_status.3.gz
+-rw-r--r--  0 root   root      546 Apr 25 05:41 usr/share/man/man3/fribidi_set_debug.3.gz
+-rw-r--r--  0 root   root      781 Apr 25 05:41 usr/share/man/man3/fribidi_set_mirroring.3.gz
+-rw-r--r--  0 root   root      867 Apr 25 05:41 usr/share/man/man3/fribidi_set_reorder_nsm.3.gz
+-rw-r--r--  0 root   root     1045 Apr 25 05:41 usr/share/man/man3/fribidi_shape.3.gz
+-rw-r--r--  0 root   root     1077 Apr 25 05:41 usr/share/man/man3/fribidi_shape_arabic.3.gz
+-rw-r--r--  0 root   root      776 Apr 25 05:41 usr/share/man/man3/fribidi_shape_mirroring.3.gz
+-rw-r--r--  0 root   root      942 Apr 25 05:41 usr/share/man/man3/fribidi_unicode_to_charset.3.gz
+-rwxr-xr-x  0 root   root    27736 May 23 22:37 usr/bin/fribidi
+-rwxr-xr-x  0 root   root   116864 May 23 22:37 usr/lib/libfribidi.so.0.4.0
+-rw-r--r--  0 root   root   152354 May 23 22:37 usr/lib/libfribidi.a
+drwxr-xr-x  0 root   root        0 May 23 22:37 usr/lib/pkgconfig/
+lrwxrwxrwx  0 root   root        0 May 23 22:37 usr/lib/libfribidi.so.0 -> libfribidi.so.0.4.0
+lrwxrwxrwx  0 root   root        0 May 23 22:37 usr/lib/libfribidi.so -> libfribidi.so.0
+-rw-r--r--  0 root   root      210 May 23 22:37 usr/lib/pkgconfig/fribidi.pc
+drwxr-xr-x  0 root   root        0 May 23 22:37 usr/include/fribidi/
+-rw-r--r--  0 root   root      327 May 23 22:37 usr/include/fribidi/fribidi-unicode-version.h
+-rw-r--r--  0 root   root     2823 Jul 20  2018 usr/include/fribidi/fribidi-arabic.h
+-rw-r--r--  0 root   root       80 Aug  4  2015 usr/include/fribidi/fribidi-begindecls.h
+-rw-r--r--  0 root   root     6253 Jul  5  2020 usr/include/fribidi/fribidi-bidi.h
+-rw-r--r--  0 root   root    14990 Jul  5  2020 usr/include/fribidi/fribidi-bidi-types.h
+-rw-r--r--  0 root   root     3773 Jul 20  2018 usr/include/fribidi/fribidi-bidi-types-list.h
+-rw-r--r--  0 root   root     3322 Sep 27  2019 usr/include/fribidi/fribidi-char-sets.h
+-rw-r--r--  0 root   root     2266 Jul 20  2018 usr/include/fribidi/fribidi-char-sets-list.h
+-rw-r--r--  0 root   root     4788 Mar 17 19:10 usr/include/fribidi/fribidi-common.h
+-rw-r--r--  0 root   root     6049 Jul  5  2020 usr/include/fribidi/fribidi-deprecated.h
+-rw-r--r--  0 root   root       74 Aug  4  2015 usr/include/fribidi/fribidi-enddecls.h
+-rw-r--r--  0 root   root     2038 Jul 20  2018 usr/include/fribidi/fribidi-flags.h
+-rw-r--r--  0 root   root     2868 Jul 20  2018 usr/include/fribidi/fribidi-joining.h
+-rw-r--r--  0 root   root     8180 Jul  5  2020 usr/include/fribidi/fribidi-joining-types.h
+-rw-r--r--  0 root   root     1697 Jul 20  2018 usr/include/fribidi/fribidi-joining-types-list.h
+-rw-r--r--  0 root   root     3028 Jul 20  2018 usr/include/fribidi/fribidi-mirroring.h
+-rw-r--r--  0 root   root     3180 Jul 20  2018 usr/include/fribidi/fribidi-brackets.h
+-rw-r--r--  0 root   root     2670 Jul 20  2018 usr/include/fribidi/fribidi-shape.h
+-rw-r--r--  0 root   root     2428 Sep 27  2019 usr/include/fribidi/fribidi-types.h
+-rw-r--r--  0 root   root     3352 Jul  5  2020 usr/include/fribidi/fribidi-unicode.h
+-rw-r--r--  0 root   root     4831 Jun  1  2021 usr/include/fribidi/fribidi.h
+-rw-r--r--  0 root   root      673 May 23 22:37 usr/include/fribidi/fribidi-config.h
+=======> Building '/home/devel/packages/fribidi#1.0.14-1.x86_64.pkg.tar.zst' succeeded.
+prt-get: Using PKGMK_PACKAGE_DIR: /home/devel/packages
+prt-get: reinstalling fribidi 1.0.14-1
+prt-get: /usr/bin/pkgadd -u fribidi#1.0.14-1.x86_64.pkg.tar.zst
+prt-get: build done Thu May 23 22:37:12 2024
+

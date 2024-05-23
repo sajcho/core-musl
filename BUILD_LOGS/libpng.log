@@ -1,0 +1,470 @@
+prt-get: updating /usr/ports/opt-musl/libpng
+prt-get: starting build Thu May 23 23:22:06 2024
+=======> WARNING: Signature not found, creating new.
+=======> Building '/home/devel/packages/libpng#1.6.43-1.x86_64.pkg.tar.zst'.
+bsdtar -p -o -C /home/devel/building/work/src -xf /home/devel/sources/libpng-1.6.43.tar.gz
+cp libpng-1.6.43-apng.patch /home/devel/building/work/src
+cp libpng-fix-arm-neon.patch /home/devel/building/work/src
++ build
++ cd libpng-1.6.43
++ patch -p1 -i /home/devel/building/work/src/libpng-1.6.43-apng.patch
+patching file png.h
+patching file pngget.c
+patching file pnginfo.h
+patching file pngpread.c
+patching file pngpriv.h
+patching file pngread.c
+patching file pngrutil.c
+patching file pngset.c
+patching file pngstruct.h
+patching file pngtest.c
+patching file pngwrite.c
+patching file pngwutil.c
+patching file scripts/symbols.def
++ patch -p1 -i /home/devel/building/work/src/libpng-fix-arm-neon.patch
+patching file configure.ac
+Hunk #1 succeeded at 393 with fuzz 1 (offset 36 lines).
+patching file pngpriv.h
++ autoreconf -fiv
+autoreconf: export WARNINGS=
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --force -I scripts/autoconf
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'scripts/autoconf'.
+libtoolize: copying file 'scripts/autoconf/libtool.m4'
+libtoolize: copying file 'scripts/autoconf/ltoptions.m4'
+libtoolize: copying file 'scripts/autoconf/ltsugar.m4'
+libtoolize: copying file 'scripts/autoconf/ltversion.m4'
+libtoolize: copying file 'scripts/autoconf/lt~obsolete.m4'
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: aclocal --force -I scripts/autoconf
+autoreconf: running: /usr/bin/autoconf --force
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:61: installing './compile'
+configure.ac:37: installing './missing'
+Makefile.am: installing './depcomp'
+autoreconf: './install-sh' is updated
+autoreconf: './config.sub' is updated
+autoreconf: './config.guess' is updated
+autoreconf: Leaving directory '.'
++ ./configure --build=x86_64-unknown-linux-musl --host=x86_64-unknown-linux-musl --prefix=/usr --enable-static
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for x86_64-unknown-linux-musl-gcc... x86_64-unknown-linux-musl-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-unknown-linux-musl-gcc accepts -g... yes
+checking for x86_64-unknown-linux-musl-gcc option to enable C11 features... none needed
+checking whether x86_64-unknown-linux-musl-gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of x86_64-unknown-linux-musl-gcc... gcc3
+checking dependency style of x86_64-unknown-linux-musl-gcc... gcc3
+checking build system type... x86_64-unknown-linux-musl
+checking host system type... x86_64-unknown-linux-musl
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking how to print strings... printf
+checking for ld used by x86_64-unknown-linux-musl-gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking how to run the C preprocessor... x86_64-unknown-linux-musl-gcc -E
+checking for gawk... (cached) gawk
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/x86_64-unknown-linux-musl-nm -B
+checking the name lister (/usr/bin/x86_64-unknown-linux-musl-nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-unknown-linux-musl file names to x86_64-unknown-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for x86_64-unknown-linux-musl-file... no
+checking for file... file
+checking for x86_64-unknown-linux-musl-objdump... x86_64-unknown-linux-musl-objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-unknown-linux-musl-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-unknown-linux-musl-ar... x86_64-unknown-linux-musl-ar
+checking for archiver @FILE support... @
+checking for x86_64-unknown-linux-musl-strip... x86_64-unknown-linux-musl-strip
+checking for x86_64-unknown-linux-musl-ranlib... x86_64-unknown-linux-musl-ranlib
+checking command to parse /usr/bin/x86_64-unknown-linux-musl-nm -B output from x86_64-unknown-linux-musl-gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-unknown-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if x86_64-unknown-linux-musl-gcc supports -fno-rtti -fno-exceptions... no
+checking for x86_64-unknown-linux-musl-gcc option to produce PIC... -fPIC -DPIC
+checking if x86_64-unknown-linux-musl-gcc PIC flag -fPIC -DPIC works... yes
+checking if x86_64-unknown-linux-musl-gcc static flag -static works... yes
+checking if x86_64-unknown-linux-musl-gcc supports -c -o file.o... yes
+checking if x86_64-unknown-linux-musl-gcc supports -c -o file.o... (cached) yes
+checking whether the x86_64-unknown-linux-musl-gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking if awk (gawk) works... yes
+checking if we need to force back C standard to C89... no
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for C/C++ restrict keyword... __restrict__
+checking for pow... yes
+checking for clock_gettime... yes
+checking for zlibVersion in -lz... yes
+checking for feenableexcept in -lm... no
+checking for feenableexcept... no
+checking if using Solaris linker... no
+checking if libraries can be versioned... yes
+checking for symbol prefix... 
+configure: pkgconfig directory is ${libdir}/pkgconfig
+configure: Extra options for compiler: 
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libpng.pc
+config.status: creating libpng-config
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
++ make V=1
+rm -f pnglibconf.c pnglibconf.tf[45]
+gawk -f ./scripts/options.awk out=pnglibconf.tf4 version=search\
+    ./pngconf.h ./scripts/pnglibconf.dfa\
+    ./pngusr.dfa  1>&2
+gawk -f ./scripts/options.awk out=pnglibconf.tf5 pnglibconf.tf4 1>&2
+rm pnglibconf.tf4
+mv pnglibconf.tf5 pnglibconf.c
+rm -f pnglibconf.out pnglibconf.tf[12]
+test -d scripts || mkdir scripts || test -d scripts
+x86_64-unknown-linux-musl-gcc -E -DHAVE_CONFIG_H -I. \
+     -DPNGLIB_LIBNAME='PNG16_0' -DPNGLIB_VERSION='1.6.43' -DSYMBOL_PREFIX='' -DPNG_NO_USE_READ_MACROS -DPNG_BUILDING_SYMBOL_TABLE  pnglibconf.c > pnglibconf.tf1
+gawk -f "./scripts/dfn.awk" out="pnglibconf.tf2" pnglibconf.tf1 1>&2
+rm -f pnglibconf.tf1
+mv pnglibconf.tf2 pnglibconf.out
+rm -f pnglibconf.h
+cp pnglibconf.out pnglibconf.h
+make  all-am
+make[1]: Entering directory '/home/devel/building/work/src/libpng-1.6.43'
+:>pngprefix.h
+rm -f scripts/vers.out scripts/vers.tf[12]
+depbase=`echo contrib/tools/png-fix-itxt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT contrib/tools/png-fix-itxt.o -MD -MP -MF $depbase.Tpo -c -o contrib/tools/png-fix-itxt.o contrib/tools/png-fix-itxt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+cp libpng-config libpng16-config
+test -d scripts || mkdir scripts || test -d scripts
+cp libpng.pc libpng16.pc
+x86_64-unknown-linux-musl-gcc -E -DHAVE_CONFIG_H -I. \
+     -DPNGLIB_LIBNAME='PNG16_0' -DPNGLIB_VERSION='1.6.43' -DSYMBOL_PREFIX='' -DPNG_NO_USE_READ_MACROS -DPNG_BUILDING_SYMBOL_TABLE  scripts/vers.c > scripts/vers.tf1
+depbase=`echo pngtest.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT pngtest.o -MD -MP -MF $depbase.Tpo -c -o pngtest.o pngtest.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo contrib/tools/pngcp.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT contrib/tools/pngcp.o -MD -MP -MF $depbase.Tpo -c -o contrib/tools/pngcp.o contrib/tools/pngcp.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo contrib/tools/pngfix.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT contrib/tools/pngfix.o -MD -MP -MF $depbase.Tpo -c -o contrib/tools/pngfix.o contrib/tools/pngfix.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo png.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT png.lo -MD -MP -MF $depbase.Tpo -c -o png.lo png.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo pngerror.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT pngerror.lo -MD -MP -MF $depbase.Tpo -c -o pngerror.lo pngerror.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo pngget.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT pngget.lo -MD -MP -MF $depbase.Tpo -c -o pngget.lo pngget.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT png.lo -MD -MP -MF .deps/png.Tpo -c png.c  -fPIC -DPIC -o .libs/png.o
+gawk -f "./scripts/dfn.awk" out="scripts/vers.tf2" scripts/vers.tf1 1>&2
+rm -f scripts/vers.tf1
+mv scripts/vers.tf2 scripts/vers.out
+depbase=`echo pngmem.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT pngmem.lo -MD -MP -MF $depbase.Tpo -c -o pngmem.lo pngmem.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngget.lo -MD -MP -MF .deps/pngget.Tpo -c pngget.c  -fPIC -DPIC -o .libs/pngget.o
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngerror.lo -MD -MP -MF .deps/pngerror.Tpo -c pngerror.c  -fPIC -DPIC -o .libs/pngerror.o
+pngtest.c: In function 'test_one_file':
+pngtest.c:1583:17: warning: "pass_height" redefined
+ 1583 | #        define pass_height height
+      |                 ^~~~~~~~~~~
+pngtest.c:1520:23: note: this is the location of the previous definition
+ 1520 | #              define pass_height frame_height
+      |                       ^~~~~~~~~~~
+depbase=`echo pngpread.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT pngpread.lo -MD -MP -MF $depbase.Tpo -c -o pngpread.lo pngpread.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngmem.lo -MD -MP -MF .deps/pngmem.Tpo -c pngmem.c  -fPIC -DPIC -o .libs/pngmem.o
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngpread.lo -MD -MP -MF .deps/pngpread.Tpo -c pngpread.c  -fPIC -DPIC -o .libs/pngpread.o
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngmem.lo -MD -MP -MF .deps/pngmem.Tpo -c pngmem.c -o pngmem.o >/dev/null 2>&1
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngerror.lo -MD -MP -MF .deps/pngerror.Tpo -c pngerror.c -o pngerror.o >/dev/null 2>&1
+depbase=`echo pngread.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT pngread.lo -MD -MP -MF $depbase.Tpo -c -o pngread.lo pngread.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngread.lo -MD -MP -MF .deps/pngread.Tpo -c pngread.c  -fPIC -DPIC -o .libs/pngread.o
+depbase=`echo pngrio.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT pngrio.lo -MD -MP -MF $depbase.Tpo -c -o pngrio.lo pngrio.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngrio.lo -MD -MP -MF .deps/pngrio.Tpo -c pngrio.c  -fPIC -DPIC -o .libs/pngrio.o
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngrio.lo -MD -MP -MF .deps/pngrio.Tpo -c pngrio.c -o pngrio.o >/dev/null 2>&1
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngget.lo -MD -MP -MF .deps/pngget.Tpo -c pngget.c -o pngget.o >/dev/null 2>&1
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngpread.lo -MD -MP -MF .deps/pngpread.Tpo -c pngpread.c -o pngpread.o >/dev/null 2>&1
+depbase=`echo pngrtran.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT pngrtran.lo -MD -MP -MF $depbase.Tpo -c -o pngrtran.lo pngrtran.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngrtran.lo -MD -MP -MF .deps/pngrtran.Tpo -c pngrtran.c  -fPIC -DPIC -o .libs/pngrtran.o
+depbase=`echo pngrutil.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT pngrutil.lo -MD -MP -MF $depbase.Tpo -c -o pngrutil.lo pngrutil.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngrutil.lo -MD -MP -MF .deps/pngrutil.Tpo -c pngrutil.c  -fPIC -DPIC -o .libs/pngrutil.o
+depbase=`echo pngset.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT pngset.lo -MD -MP -MF $depbase.Tpo -c -o pngset.lo pngset.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngset.lo -MD -MP -MF .deps/pngset.Tpo -c pngset.c  -fPIC -DPIC -o .libs/pngset.o
+depbase=`echo pngtrans.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT pngtrans.lo -MD -MP -MF $depbase.Tpo -c -o pngtrans.lo pngtrans.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngtrans.lo -MD -MP -MF .deps/pngtrans.Tpo -c pngtrans.c  -fPIC -DPIC -o .libs/pngtrans.o
+depbase=`echo pngwio.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT pngwio.lo -MD -MP -MF $depbase.Tpo -c -o pngwio.lo pngwio.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngwio.lo -MD -MP -MF .deps/pngwio.Tpo -c pngwio.c  -fPIC -DPIC -o .libs/pngwio.o
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT png.lo -MD -MP -MF .deps/png.Tpo -c png.c -o png.o >/dev/null 2>&1
+depbase=`echo pngwrite.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT pngwrite.lo -MD -MP -MF $depbase.Tpo -c -o pngwrite.lo pngwrite.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngwio.lo -MD -MP -MF .deps/pngwio.Tpo -c pngwio.c -o pngwio.o >/dev/null 2>&1
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngwrite.lo -MD -MP -MF .deps/pngwrite.Tpo -c pngwrite.c  -fPIC -DPIC -o .libs/pngwrite.o
+depbase=`echo pngwtran.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT pngwtran.lo -MD -MP -MF $depbase.Tpo -c -o pngwtran.lo pngwtran.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngtrans.lo -MD -MP -MF .deps/pngtrans.Tpo -c pngtrans.c -o pngtrans.o >/dev/null 2>&1
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngset.lo -MD -MP -MF .deps/pngset.Tpo -c pngset.c -o pngset.o >/dev/null 2>&1
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngwtran.lo -MD -MP -MF .deps/pngwtran.Tpo -c pngwtran.c  -fPIC -DPIC -o .libs/pngwtran.o
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngwtran.lo -MD -MP -MF .deps/pngwtran.Tpo -c pngwtran.c -o pngwtran.o >/dev/null 2>&1
+depbase=`echo pngwutil.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT pngwutil.lo -MD -MP -MF $depbase.Tpo -c -o pngwutil.lo pngwutil.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngwutil.lo -MD -MP -MF .deps/pngwutil.Tpo -c pngwutil.c  -fPIC -DPIC -o .libs/pngwutil.o
+depbase=`echo mips/mips_init.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT mips/mips_init.lo -MD -MP -MF $depbase.Tpo -c -o mips/mips_init.lo mips/mips_init.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngread.lo -MD -MP -MF .deps/pngread.Tpo -c pngread.c -o pngread.o >/dev/null 2>&1
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT mips/mips_init.lo -MD -MP -MF mips/.deps/mips_init.Tpo -c mips/mips_init.c  -fPIC -DPIC -o mips/.libs/mips_init.o
+depbase=`echo mips/filter_msa_intrinsics.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT mips/filter_msa_intrinsics.lo -MD -MP -MF $depbase.Tpo -c -o mips/filter_msa_intrinsics.lo mips/filter_msa_intrinsics.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT mips/filter_msa_intrinsics.lo -MD -MP -MF mips/.deps/filter_msa_intrinsics.Tpo -c mips/filter_msa_intrinsics.c  -fPIC -DPIC -o mips/.libs/filter_msa_intrinsics.o
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngwrite.lo -MD -MP -MF .deps/pngwrite.Tpo -c pngwrite.c -o pngwrite.o >/dev/null 2>&1
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT mips/mips_init.lo -MD -MP -MF mips/.deps/mips_init.Tpo -c mips/mips_init.c -o mips/mips_init.o >/dev/null 2>&1
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngrutil.lo -MD -MP -MF .deps/pngrutil.Tpo -c pngrutil.c -o pngrutil.o >/dev/null 2>&1
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT mips/filter_msa_intrinsics.lo -MD -MP -MF mips/.deps/filter_msa_intrinsics.Tpo -c mips/filter_msa_intrinsics.c -o mips/filter_msa_intrinsics.o >/dev/null 2>&1
+depbase=`echo mips/filter_mmi_inline_assembly.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT mips/filter_mmi_inline_assembly.lo -MD -MP -MF $depbase.Tpo -c -o mips/filter_mmi_inline_assembly.lo mips/filter_mmi_inline_assembly.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT mips/filter_mmi_inline_assembly.lo -MD -MP -MF mips/.deps/filter_mmi_inline_assembly.Tpo -c mips/filter_mmi_inline_assembly.c  -fPIC -DPIC -o mips/.libs/filter_mmi_inline_assembly.o
+depbase=`echo intel/intel_init.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT intel/intel_init.lo -MD -MP -MF $depbase.Tpo -c -o intel/intel_init.lo intel/intel_init.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT intel/intel_init.lo -MD -MP -MF intel/.deps/intel_init.Tpo -c intel/intel_init.c  -fPIC -DPIC -o intel/.libs/intel_init.o
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT mips/filter_mmi_inline_assembly.lo -MD -MP -MF mips/.deps/filter_mmi_inline_assembly.Tpo -c mips/filter_mmi_inline_assembly.c -o mips/filter_mmi_inline_assembly.o >/dev/null 2>&1
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT intel/intel_init.lo -MD -MP -MF intel/.deps/intel_init.Tpo -c intel/intel_init.c -o intel/intel_init.o >/dev/null 2>&1
+depbase=`echo intel/filter_sse2_intrinsics.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT intel/filter_sse2_intrinsics.lo -MD -MP -MF $depbase.Tpo -c -o intel/filter_sse2_intrinsics.lo intel/filter_sse2_intrinsics.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT intel/filter_sse2_intrinsics.lo -MD -MP -MF intel/.deps/filter_sse2_intrinsics.Tpo -c intel/filter_sse2_intrinsics.c  -fPIC -DPIC -o intel/.libs/filter_sse2_intrinsics.o
+depbase=`echo powerpc/powerpc_init.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT powerpc/powerpc_init.lo -MD -MP -MF $depbase.Tpo -c -o powerpc/powerpc_init.lo powerpc/powerpc_init.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT powerpc/powerpc_init.lo -MD -MP -MF powerpc/.deps/powerpc_init.Tpo -c powerpc/powerpc_init.c  -fPIC -DPIC -o powerpc/.libs/powerpc_init.o
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT intel/filter_sse2_intrinsics.lo -MD -MP -MF intel/.deps/filter_sse2_intrinsics.Tpo -c intel/filter_sse2_intrinsics.c -o intel/filter_sse2_intrinsics.o >/dev/null 2>&1
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT powerpc/powerpc_init.lo -MD -MP -MF powerpc/.deps/powerpc_init.Tpo -c powerpc/powerpc_init.c -o powerpc/powerpc_init.o >/dev/null 2>&1
+depbase=`echo powerpc/filter_vsx_intrinsics.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT powerpc/filter_vsx_intrinsics.lo -MD -MP -MF $depbase.Tpo -c -o powerpc/filter_vsx_intrinsics.lo powerpc/filter_vsx_intrinsics.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+rm -f libpng.vers
+cp scripts/vers.out libpng.vers
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-unknown-linux-musl-gcc  -O2 -m64 -march=x86-64 -mtune=generic   -o png-fix-itxt contrib/tools/png-fix-itxt.o  -lz 
+depbase=`echo contrib/libtests/pngunknown.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT contrib/libtests/pngunknown.o -MD -MP -MF $depbase.Tpo -c -o contrib/libtests/pngunknown.o contrib/libtests/pngunknown.c &&\
+mv -f $depbase.Tpo $depbase.Po
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT powerpc/filter_vsx_intrinsics.lo -MD -MP -MF powerpc/.deps/filter_vsx_intrinsics.Tpo -c powerpc/filter_vsx_intrinsics.c  -fPIC -DPIC -o powerpc/.libs/filter_vsx_intrinsics.o
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngrtran.lo -MD -MP -MF .deps/pngrtran.Tpo -c pngrtran.c -o pngrtran.o >/dev/null 2>&1
+libtool: link: x86_64-unknown-linux-musl-gcc -O2 -m64 -march=x86-64 -mtune=generic -o png-fix-itxt contrib/tools/png-fix-itxt.o  -lz
+depbase=`echo contrib/libtests/pngstest.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT contrib/libtests/pngstest.o -MD -MP -MF $depbase.Tpo -c -o contrib/libtests/pngstest.o contrib/libtests/pngstest.c &&\
+mv -f $depbase.Tpo $depbase.Po
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT powerpc/filter_vsx_intrinsics.lo -MD -MP -MF powerpc/.deps/filter_vsx_intrinsics.Tpo -c powerpc/filter_vsx_intrinsics.c -o powerpc/filter_vsx_intrinsics.o >/dev/null 2>&1
+libtool: compile:  x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I. -O2 -m64 -march=x86-64 -mtune=generic -MT pngwutil.lo -MD -MP -MF .deps/pngwutil.Tpo -c pngwutil.c -o pngwutil.o >/dev/null 2>&1
+depbase=`echo contrib/libtests/pngvalid.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT contrib/libtests/pngvalid.o -MD -MP -MF $depbase.Tpo -c -o contrib/libtests/pngvalid.o contrib/libtests/pngvalid.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo contrib/libtests/pngimage.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT contrib/libtests/pngimage.o -MD -MP -MF $depbase.Tpo -c -o contrib/libtests/pngimage.o contrib/libtests/pngimage.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo contrib/libtests/timepng.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+x86_64-unknown-linux-musl-gcc -DHAVE_CONFIG_H -I.     -O2 -m64 -march=x86-64 -mtune=generic -MT contrib/libtests/timepng.o -MD -MP -MF $depbase.Tpo -c -o contrib/libtests/timepng.o contrib/libtests/timepng.c &&\
+mv -f $depbase.Tpo $depbase.Po
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-unknown-linux-musl-gcc  -O2 -m64 -march=x86-64 -mtune=generic -no-undefined -export-dynamic -version-number 16:43:0  -Wl,--version-script=libpng.vers   -o libpng16.la -rpath /usr/lib png.lo pngerror.lo pngget.lo pngmem.lo pngpread.lo pngread.lo pngrio.lo pngrtran.lo pngrutil.lo pngset.lo pngtrans.lo pngwio.lo pngwrite.lo pngwtran.lo pngwutil.lo  mips/mips_init.lo mips/filter_msa_intrinsics.lo  mips/filter_mmi_inline_assembly.lo intel/intel_init.lo intel/filter_sse2_intrinsics.lo powerpc/powerpc_init.lo powerpc/filter_vsx_intrinsics.lo   -lz 
+libtool: link: x86_64-unknown-linux-musl-gcc -shared  -fPIC -DPIC  .libs/png.o .libs/pngerror.o .libs/pngget.o .libs/pngmem.o .libs/pngpread.o .libs/pngread.o .libs/pngrio.o .libs/pngrtran.o .libs/pngrutil.o .libs/pngset.o .libs/pngtrans.o .libs/pngwio.o .libs/pngwrite.o .libs/pngwtran.o .libs/pngwutil.o mips/.libs/mips_init.o mips/.libs/filter_msa_intrinsics.o mips/.libs/filter_mmi_inline_assembly.o intel/.libs/intel_init.o intel/.libs/filter_sse2_intrinsics.o powerpc/.libs/powerpc_init.o powerpc/.libs/filter_vsx_intrinsics.o   -lz  -O2 -m64 -march=x86-64 -mtune=generic -Wl,--version-script=libpng.vers   -Wl,-soname -Wl,libpng16.so.16 -o .libs/libpng16.so.16.43.0
+libtool: link: (cd ".libs" && rm -f "libpng16.so.16" && ln -s "libpng16.so.16.43.0" "libpng16.so.16")
+libtool: link: (cd ".libs" && rm -f "libpng16.so" && ln -s "libpng16.so.16.43.0" "libpng16.so")
+libtool: link: x86_64-unknown-linux-musl-ar cr .libs/libpng16.a  png.o pngerror.o pngget.o pngmem.o pngpread.o pngread.o pngrio.o pngrtran.o pngrutil.o pngset.o pngtrans.o pngwio.o pngwrite.o pngwtran.o pngwutil.o mips/mips_init.o mips/filter_msa_intrinsics.o mips/filter_mmi_inline_assembly.o intel/intel_init.o intel/filter_sse2_intrinsics.o powerpc/powerpc_init.o powerpc/filter_vsx_intrinsics.o
+libtool: link: x86_64-unknown-linux-musl-ranlib .libs/libpng16.a
+libtool: link: ( cd ".libs" && rm -f "libpng16.la" && ln -s "../libpng16.la" "libpng16.la" )
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-unknown-linux-musl-gcc  -O2 -m64 -march=x86-64 -mtune=generic   -o pngfix contrib/tools/pngfix.o libpng16.la -lz 
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-unknown-linux-musl-gcc  -O2 -m64 -march=x86-64 -mtune=generic   -o pngtest pngtest.o libpng16.la -lz 
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-unknown-linux-musl-gcc  -O2 -m64 -march=x86-64 -mtune=generic   -o pngunknown contrib/libtests/pngunknown.o libpng16.la -lz 
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-unknown-linux-musl-gcc  -O2 -m64 -march=x86-64 -mtune=generic   -o pngstest contrib/libtests/pngstest.o libpng16.la -lz 
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-unknown-linux-musl-gcc  -O2 -m64 -march=x86-64 -mtune=generic   -o pngimage contrib/libtests/pngimage.o libpng16.la -lz 
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-unknown-linux-musl-gcc  -O2 -m64 -march=x86-64 -mtune=generic   -o pngcp contrib/tools/pngcp.o libpng16.la -lz 
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-unknown-linux-musl-gcc  -O2 -m64 -march=x86-64 -mtune=generic   -o timepng contrib/libtests/timepng.o libpng16.la -lz 
+libtool: link: x86_64-unknown-linux-musl-gcc -O2 -m64 -march=x86-64 -mtune=generic -o .libs/pngstest contrib/libtests/pngstest.o  ./.libs/libpng16.so -lz
+libtool: link: x86_64-unknown-linux-musl-gcc -O2 -m64 -march=x86-64 -mtune=generic -o .libs/pngtest pngtest.o  ./.libs/libpng16.so -lz
+libtool: link: x86_64-unknown-linux-musl-gcc -O2 -m64 -march=x86-64 -mtune=generic -o .libs/pngfix contrib/tools/pngfix.o  ./.libs/libpng16.so -lz
+libtool: link: x86_64-unknown-linux-musl-gcc -O2 -m64 -march=x86-64 -mtune=generic -o .libs/pngimage contrib/libtests/pngimage.o  ./.libs/libpng16.so -lz
+libtool: link: x86_64-unknown-linux-musl-gcc -O2 -m64 -march=x86-64 -mtune=generic -o .libs/timepng contrib/libtests/timepng.o  ./.libs/libpng16.so -lz
+libtool: link: x86_64-unknown-linux-musl-gcc -O2 -m64 -march=x86-64 -mtune=generic -o .libs/pngunknown contrib/libtests/pngunknown.o  ./.libs/libpng16.so -lz
+libtool: link: x86_64-unknown-linux-musl-gcc -O2 -m64 -march=x86-64 -mtune=generic -o .libs/pngcp contrib/tools/pngcp.o  ./.libs/libpng16.so -lz
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-unknown-linux-musl-gcc  -O2 -m64 -march=x86-64 -mtune=generic   -o pngvalid contrib/libtests/pngvalid.o libpng16.la -lz 
+libtool: link: x86_64-unknown-linux-musl-gcc -O2 -m64 -march=x86-64 -mtune=generic -o .libs/pngvalid contrib/libtests/pngvalid.o  ./.libs/libpng16.so -lz
+make[1]: Leaving directory '/home/devel/building/work/src/libpng-1.6.43'
++ make DESTDIR=/home/devel/building/work/pkg install
+make  install-am
+make[1]: Entering directory '/home/devel/building/work/src/libpng-1.6.43'
+make[2]: Entering directory '/home/devel/building/work/src/libpng-1.6.43'
+ /bin/mkdir -p '/home/devel/building/work/pkg/usr/bin'
+ /bin/mkdir -p '/home/devel/building/work/pkg/usr/share/man/man3'
+ /bin/mkdir -p '/home/devel/building/work/pkg/usr/share/man/man5'
+ /bin/mkdir -p '/home/devel/building/work/pkg/usr/include/libpng16'
+ /bin/mkdir -p '/home/devel/building/work/pkg/usr/lib/pkgconfig'
+ /usr/bin/install -c libpng16-config '/home/devel/building/work/pkg/usr/bin'
+ /usr/bin/install -c -m 644 pnglibconf.h '/home/devel/building/work/pkg/usr/include/libpng16'
+ /bin/mkdir -p '/home/devel/building/work/pkg/usr/include/libpng16'
+ /usr/bin/install -c -m 644 libpng16.pc '/home/devel/building/work/pkg/usr/lib/pkgconfig'
+ /usr/bin/install -c -m 644 png.h pngconf.h '/home/devel/building/work/pkg/usr/include/libpng16'
+ /bin/mkdir -p '/home/devel/building/work/pkg/usr/lib'
+ /usr/bin/install -c -m 644 libpng.3 libpngpf.3 '/home/devel/building/work/pkg/usr/share/man/man3'
+ /usr/bin/install -c -m 644 png.5 '/home/devel/building/work/pkg/usr/share/man/man5'
+ /bin/sh ./libtool   --mode=install /usr/bin/install -c   libpng16.la '/home/devel/building/work/pkg/usr/lib'
+make  install-data-hook
+make[3]: Entering directory '/home/devel/building/work/src/libpng-1.6.43'
++ cd /home/devel/building/work/pkg/usr/include
++ rm -f pnglibconf.h
++ cd /home/devel/building/work/pkg/usr/lib/pkgconfig
++ rm -f libpng.pc
++ ln -s libpng16/pnglibconf.h pnglibconf.h
++ ln -s libpng16.pc libpng.pc
++ rm -f png.h
++ ln -s libpng16/png.h png.h
++ rm -f pngconf.h
++ ln -s libpng16/pngconf.h pngconf.h
+make[3]: Leaving directory '/home/devel/building/work/src/libpng-1.6.43'
+libtool: install: /usr/bin/install -c .libs/libpng16.so.16.43.0 /home/devel/building/work/pkg/usr/lib/libpng16.so.16.43.0
+libtool: install: (cd /home/devel/building/work/pkg/usr/lib && { ln -s -f libpng16.so.16.43.0 libpng16.so.16 || { rm -f libpng16.so.16 && ln -s libpng16.so.16.43.0 libpng16.so.16; }; })
+libtool: install: (cd /home/devel/building/work/pkg/usr/lib && { ln -s -f libpng16.so.16.43.0 libpng16.so || { rm -f libpng16.so && ln -s libpng16.so.16.43.0 libpng16.so; }; })
+libtool: install: /usr/bin/install -c .libs/libpng16.lai /home/devel/building/work/pkg/usr/lib/libpng16.la
+libtool: install: /usr/bin/install -c .libs/libpng16.a /home/devel/building/work/pkg/usr/lib/libpng16.a
+libtool: install: chmod 644 /home/devel/building/work/pkg/usr/lib/libpng16.a
+libtool: install: x86_64-unknown-linux-musl-ranlib /home/devel/building/work/pkg/usr/lib/libpng16.a
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+ /bin/mkdir -p '/home/devel/building/work/pkg/usr/bin'
+  /bin/sh ./libtool   --mode=install /usr/bin/install -c pngfix png-fix-itxt '/home/devel/building/work/pkg/usr/bin'
+libtool: install: /usr/bin/install -c .libs/pngfix /home/devel/building/work/pkg/usr/bin/pngfix
+libtool: install: /usr/bin/install -c png-fix-itxt /home/devel/building/work/pkg/usr/bin/png-fix-itxt
+make  install-exec-hook
+make[3]: Entering directory '/home/devel/building/work/src/libpng-1.6.43'
++ cd /home/devel/building/work/pkg/usr/lib
++ rm -f libpng.a
++ cd /home/devel/building/work/pkg/usr/bin
++ rm -f libpng-config
++ test -f libpng16.a
++ ln -s libpng16.a libpng.a
++ ln -s libpng16-config libpng-config
++ rm -f libpng.dll.a
++ test -f libpng16.dll.a
++ rm -f libpng.so
++ test -f libpng16.so
++ ln -s libpng16.so libpng.so
++ rm -f libpng.so.16.43
++ test -f libpng16.so.16.43
++ rm -f libpng.la
++ test -f libpng16.la
++ ln -s libpng16.la libpng.la
++ rm -f libpng.sl
++ test -f libpng16.sl
++ rm -f libpng.dylib
++ test -f libpng16.dylib
+make[3]: Leaving directory '/home/devel/building/work/src/libpng-1.6.43'
+make[2]: Leaving directory '/home/devel/building/work/src/libpng-1.6.43'
+make[1]: Leaving directory '/home/devel/building/work/src/libpng-1.6.43'
+=======> Build result:
+drwxr-xr-x  0 root   root        0 May 23 23:22 usr/
+drwxr-xr-x  0 root   root        0 May 23 23:22 usr/bin/
+drwxr-xr-x  0 root   root        0 May 23 23:22 usr/share/
+drwxr-xr-x  0 root   root        0 May 23 23:22 usr/include/
+drwxr-xr-x  0 root   root        0 May 23 23:22 usr/lib/
+drwxr-xr-x  0 root   root        0 May 23 23:22 usr/lib/pkgconfig/
+-rwxr-xr-x  0 root   root   232688 May 23 23:22 usr/lib/libpng16.so.16.43.0
+lrwxrwxrwx  0 root   root        0 May 23 23:22 usr/lib/libpng16.so.16 -> libpng16.so.16.43.0
+lrwxrwxrwx  0 root   root        0 May 23 23:22 usr/lib/libpng16.so -> libpng16.so.16.43.0
+-rwxr-xr-x  0 root   root      927 May 23 23:22 usr/lib/libpng16.la
+-rw-r--r--  0 root   root   381396 May 23 23:22 usr/lib/libpng16.a
+lrwxrwxrwx  0 root   root        0 May 23 23:22 usr/lib/libpng.a -> libpng16.a
+lrwxrwxrwx  0 root   root        0 May 23 23:22 usr/lib/libpng.so -> libpng16.so
+lrwxrwxrwx  0 root   root        0 May 23 23:22 usr/lib/libpng.la -> libpng16.la
+-rw-r--r--  0 root   root      259 May 23 23:22 usr/lib/pkgconfig/libpng16.pc
+lrwxrwxrwx  0 root   root        0 May 23 23:22 usr/lib/pkgconfig/libpng.pc -> libpng16.pc
+drwxr-xr-x  0 root   root        0 May 23 23:22 usr/include/libpng16/
+lrwxrwxrwx  0 root   root        0 May 23 23:22 usr/include/pnglibconf.h -> libpng16/pnglibconf.h
+lrwxrwxrwx  0 root   root        0 May 23 23:22 usr/include/png.h -> libpng16/png.h
+lrwxrwxrwx  0 root   root        0 May 23 23:22 usr/include/pngconf.h -> libpng16/pngconf.h
+-rw-r--r--  0 root   root     7805 May 23 23:22 usr/include/libpng16/pnglibconf.h
+-rw-r--r--  0 root   root   146820 May 23 23:22 usr/include/libpng16/png.h
+-rw-r--r--  0 root   root    22806 May 23 23:22 usr/include/libpng16/pngconf.h
+drwxr-xr-x  0 root   root        0 May 23 23:22 usr/share/man/
+drwxr-xr-x  0 root   root        0 May 23 23:22 usr/share/man/man3/
+drwxr-xr-x  0 root   root        0 May 23 23:22 usr/share/man/man5/
+-rw-r--r--  0 root   root      970 May 23 23:22 usr/share/man/man5/png.5.gz
+-rw-r--r--  0 root   root    76997 May 23 23:22 usr/share/man/man3/libpng.3.gz
+-rw-r--r--  0 root   root      495 May 23 23:22 usr/share/man/man3/libpngpf.3.gz
+-rwxr-xr-x  0 root   root     2313 May 23 23:22 usr/bin/libpng16-config
+-rwxr-xr-x  0 root   root    47624 May 23 23:22 usr/bin/pngfix
+-rwxr-xr-x  0 root   root    14184 May 23 23:22 usr/bin/png-fix-itxt
+lrwxrwxrwx  0 root   root        0 May 23 23:22 usr/bin/libpng-config -> libpng16-config
+=======> Building '/home/devel/packages/libpng#1.6.43-1.x86_64.pkg.tar.zst' succeeded.
+prt-get: Using PKGMK_PACKAGE_DIR: /home/devel/packages
+prt-get: reinstalling libpng 1.6.43-1
+prt-get: /usr/bin/pkgadd -u libpng#1.6.43-1.x86_64.pkg.tar.zst
+prt-get: build done Thu May 23 23:22:17 2024
+
