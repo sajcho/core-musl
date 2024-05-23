@@ -1,0 +1,5 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXFLtocJK9BaudSoLVYcTfZBWWakkmyZrtpkPGhVXue4K0YylJz1CuoOUsJMmmUoovXyf1TdGAaAformiYCN7QAo=
+SHA256 (Pkgfile) = 89416eeb2fe1d5f14dd840562212b59df620ed954540f688fe4382f947d4c504
+SHA256 (.footprint) = 92930b2d9b1d5da08760f16fa80c1ff0c13e811e50cb4414f98265cef748bf40
+SHA256 (cacert.pem) = 1794c1d4f7055b7d02c2170337b61b48a2ef6c90d77e95444fd2596f4cac609f
