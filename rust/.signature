@@ -1,0 +1,7 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXPd1BPCUGEkJfaB6NGUqDDWj2iEhTRYC06BzR1lrsvCbeQ16RgXBU6Cor0pt6/FK2Ha3762vudFEox1IDJDMfQQ=
+SHA256 (Pkgfile) = e3e0101de3b342dea8023c86584dec0302d17ed3f53d71df95ed16c7460f80aa
+SHA256 (.footprint) = 03148cfe0712da6374d76445efa76ce51f45499af455a81b1338e9ae7346279d
+SHA256 (rustc-1.78.0-src.tar.xz) = 8065824f0255faa3901db8206e6f9423f6f8c07cec28bc6f2797c6c948310ece
+SHA256 (0001-dist.rs-change-dir-libexec-to-lib.patch) = d31c7cff30566fe9607342ddcf5dac0c1804df8946a0686bda2ad517338abdca
+SHA256 (0002-tool.rs-change-dir-libexec-to-lib.patch) = c6300cdb65e6481bd6974d51bfad2c253a63bb7312f87f78b4dbff4489278174
