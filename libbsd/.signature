@@ -1,0 +1,5 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXONKWVV9AiaWDx6KFvgXiAnFS9vfVYrra6yPaSQ3m8ya9fQ3mllFW30ypPLlJAOwqkTxY9F/oyoxS8bLApOaPwk=
+SHA256 (Pkgfile) = 9b993b7a7bccd8d4b3e48fad373756ba2d0a2051734180cf547a49129259f519
+SHA256 (.footprint) = 1ae7d12b2197449b30a10de03e5d70a15e3113116a027237a7002db6e1d462c5
+SHA256 (libbsd-0.12.2.tar.xz) = b88cc9163d0c652aaf39a99991d974ddba1c3a9711db8f1b5838af2a14731014

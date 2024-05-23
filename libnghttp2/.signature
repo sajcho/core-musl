@@ -1,0 +1,5 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXFAVe9nY+kJmAad2S1x9dqVbb253QoWUp7F4VnSY52um+oOJNGhDj6iQ3cdP3kT9KiQBpC6aaU/aThGBjjPxxQM=
+SHA256 (Pkgfile) = 39c0219104dc468d4c57e066223b6a4808bbd556af8d37e1b704eb30ca702163
+SHA256 (.footprint) = 7d90bd43bf89b688265d7a54b230f98a541c81cbc9128a9b1ce4a68c1f1dd582
+SHA256 (nghttp2-1.61.0.tar.xz) = c0e660175b9dc429f11d25b9507a834fb752eea9135ab420bb7cb7e9dbcc9654

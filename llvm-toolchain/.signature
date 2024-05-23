@@ -1,0 +1,5 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXCB3zUFUky7LCkX2tzD0lzqX9EK+zxShfRPr2O60FTTPglPy4NwwYllVa/wqi39s2cOPc04oemB9YEiSH5ZKJQE=
+SHA256 (Pkgfile) = 5f088d69e30ae8699e79d722fc8a69e8cafad8f09285893ffa296243dc944b2a
+SHA256 (.footprint) = 7d190c49be9d48d8d88d6cffc01e10e2d3b4f0642feda6f97f38d5f5271342f8
+SHA256 (llvm-project-18.1.5.src.tar.xz) = 3591a52761a7d390ede51af01ea73abfecc4b1d16445f9d019b67a57edd7de56
