@@ -1,0 +1,5 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXCev7p1gWsk+X3ARr0kfH2zrO5xFt+GQDSPDPYD9rKuOziWpWSprdwH7FZ24y5TevQaZlNZwKd8b1GcvJC5hTQo=
+SHA256 (Pkgfile) = e31ba894e0a94083eb842e7cb69ac5762300bb8418c8d8f972156cf23b54ccfc
+SHA256 (.footprint) = f07686f63bde21a8d8eef3ffcf57514cd270dd1c4765e3981c5c6ec755ff4acf
+SHA256 (gdbm-1.23.tar.gz) = 74b1081d21fff13ae4bd7c16e5d6e504a4c26f7cde1dca0d963a484174bbcacd
