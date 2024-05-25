@@ -1,0 +1,23 @@
+# Description:	Multi-platform support library with a focus on asynchronous I/O
+# URL:		https://dist.libuv.org/
+# Maintainer:	sajcho, saux dot aarch64 at gmail dot com
+
+name=libuv
+version=1.48.0
+release=1
+source=(https://dist.libuv.org/dist/v${version}/${name}-v${version}.tar.gz)
+
+build() {
+	cd ${name}-v${version}
+
+	./autogen.sh
+
+	./configure \
+		--build=$CHOST \
+		--host=$CHOST \
+		--prefix=/usr
+
+	make V=1
+
+	make DESTDIR=$PKG install
+}

@@ -1,0 +1,5 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXKueNXROC9rKkOhBDd6KYbBVI2kKaSQDiVgFoOVAagCsOAVK3g2V/sKSq0n7isxcTyv+Ig53AK7d2OWzZfnoHQs=
+SHA256 (Pkgfile) = f47803be59ed1cf9b58fdc742da5b4a281dc61330a90627261d803edc785023d
+SHA256 (.footprint) = c80a48ce3437f7b3c712ace13c48dc067631426bf90f6508e2cb11a0c6934d99
+SHA256 (liburing-2.6.tar.bz2) = 78bcc0dc0d004a238d8b5f597adbb4ec74926352a3983b872db7f0efdb72565d

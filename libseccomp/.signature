@@ -1,0 +1,6 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXG7Rq0xwtgRlDrmsG+EEqwq0tl7YGAQy7WFFbLEpHUpYWDN0PofJpVmek9cqXL06pcN3eRtZo1z1gbPNv9+w7AU=
+SHA256 (Pkgfile) = b675b7e77a2255208f17b53d88162ce7377858a3c49431339fd7a863ce3a6849
+SHA256 (.footprint) = a74fb00c689b4d7b4f4a8c3f645b13028de05faeec4a9ad03dd68ce605927e88
+SHA256 (libseccomp-2.5.5.tar.gz) = 248a2c8a4d9b9858aa6baf52712c34afefcf9c9e94b76dce02c1c9aa25fb3375
+SHA256 (remove-redefinition-prctl.patch) = e133750447fcf0f84504d7dff4a915e357cfce9961576c57fe63df669f8dc58a

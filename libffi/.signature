@@ -1,0 +1,5 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXDiywRGB2V5f2c5BhTYrIDwEkcXPb87DXMg00+9/bFk79ojFVTXZEtOrl2DlCMtu4CPPeX64TkyNkYRe5T3rjAM=
+SHA256 (Pkgfile) = d5c5f55750b39cf1fcf53e177d52f935077ddd3c8f3913f99aa840b8a90d2307
+SHA256 (.footprint) = e52b851fbccfef0d05c1f476213021f2c06b7fbbb9ce9a4fbb58c455537d77ba
+SHA256 (libffi-3.4.6.tar.gz) = b0dea9df23c863a7a50e825440f3ebffabd65df1497108e5d437747843895a4e
