@@ -1,0 +1,10 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXMnd8zQAQ/IcEYiPgxeqzAb6f4Q9XVADRXxeBSPn04svIuAaQTMlHuQ3tgNh83oa1yLGlZMUbnxO5MVS0QAQ8wY=
+SHA256 (Pkgfile) = 8fa9ce155df24551b14440706e500cf1ee20563587708ee09fe7097044a60559
+SHA256 (.footprint) = 38f851e769f75cc0665e311acf6cd53d6097de993b303bd98642efa79300942e
+SHA256 (musl-1.2.5.tar.gz) = a9a118bbe84d8764da0ea0d28b3ab3fae8477fc7e4085d90102b8596fc7c75e4
+SHA256 (handle-aux-at_base.patch) = 2a65e03b94217063d72fe998e5fb2e25cd01716078a3ba1b0ab574ab205111e6
+SHA256 (__stack_chk_fail_local.c) = 299a7d75a09de3e2e11e7fb4acc3182e4a14e868093d2f30938fce9bfcff13da
+SHA256 (getconf.c) = d87d0cbb3690ae2c5d8cc218349fd8278b93855dd625deaf7ae50e320aad247c
+SHA256 (getent.c) = 002c1a216f6bed0f816ab1cfebde94a0b127193ef410c36b2190599983e015b8
+SHA256 (iconv.c) = f79a2930a2e5bb0624321589edf8b889d1e9b603e01e6b7ae214616605b3fdd7

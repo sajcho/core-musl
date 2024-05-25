@@ -1,0 +1,6 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXOKTJFrMsA12xGF9Fh2MM3Ag26j2PK9QxCz5c/S5vJYe6fTAI3vavcTwdYbLuNmiTFgw0T6fsllOC+WLlEvTNQM=
+SHA256 (Pkgfile) = 52de9bf46d0072cba90824af0951939b3793c2b84f7a315bbc753c33e41711ad
+SHA256 (.footprint) = e0add1c7bec293911c81aba83e1ccf513d253d62bb57adc81d018f5032835a9d
+SHA256 (openssh-9.7p1.tar.gz) = 490426f766d82a2763fcacd8d83ea3d70798750c7bd2aff2e57dc5660f773ffd
+SHA256 (sshd.run) = 4ededce0598954a7883be1ed3b129252116ead9e323d691091f1f906f24fc4bc

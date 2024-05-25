@@ -1,0 +1,28 @@
+# Description:	Provides the fts(3) functions, which are missing in musl libc
+# URL:		https://github.com/void-linux/musl-fts/
+# Maintainer:	sajcho, saux dot aarch64 at gmail dot com
+
+name=musl-fts
+version=1.2.7
+release=1
+source=(https://github.com/void-linux/musl-fts/archive/v${version}/${name}-${version}.tar.gz)
+
+build() {
+	cd ${name}-${version}
+
+	export CFLAGS="${CFLAGS/ -flto=auto -ffat-lto-objects/}"
+	export CXXFLAGS="${CXXFLAGS/ -flto=auto -ffat-lto-objects/}"
+
+	./bootstrap.sh
+
+	./configure \
+		--build=$CHOST \
+		--host=$CHOST \
+		--prefix=/usr
+
+	make V=1
+
+	make DESTDIR=$PKG install
+
+	install -D -m 0644 musl-fts.pc -t $PKG/usr/lib/pkgconfig/
+}
