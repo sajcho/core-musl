@@ -1,6 +1,0 @@
-untrusted comment: verify with core-musl.pub
-RWR3tfW4AteKXIEnY/6gI3ywSLhgEZo1jvsrNmjSrDfo9EIZBk3WhughGZaJqYLoN8vbQ2/huIpklQtO3LkxkH8cKJbNPHPa/A8=
-SHA256 (Pkgfile) = 7bb97d1741c9953596f8e43b7b66242f50da3c0a8199e09db1d4d3e108b1a225
-SHA256 (.footprint) = e3be062f335291d3247f9fee569bf29cbe9bd29caa4f47c445ac9d5f6e8257ca
-SHA256 (e2fsprogs-1.47.0.tar.xz) = 144af53f2bbd921cef6f8bea88bb9faddca865da3fbc657cc9b4d2001097d5db
-SHA256 (lfs64.patch) = ec2c259968c5adce34a2d4832ec6c69c8251d53183d59d13381789c81811dc22
