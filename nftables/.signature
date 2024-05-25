@@ -1,9 +1,0 @@
-untrusted comment: verify with core-musl.pub
-RWR3tfW4AteKXKZHIIsytUd/gps3mz/486H+BCE/iyK/woO9LK7Auj5rK231kkmiz+1o5OAnTrGmVzSLCY+UUnEEBfhfYpF1Ggk=
-SHA256 (Pkgfile) = ed1e202972184added70de2b5e2e7475536405b28b58c60d329ef7ed7d3f7f65
-SHA256 (.footprint) = 7b3ed7af65c11499620962c9c6e1cbd3a1ff178bd4c00b034e9420aab3e125d1
-SHA256 (nftables-1.0.9.tar.xz) = a3c304cd9ba061239ee0474f9afb938a9bb99d89b960246f66f0c3a0a85e14cd
-SHA256 (nftables-basic-firewall.nft) = 4fe63b07304af44f0c98c6453b7d98ded50cac3b8877e5daf1c95f5ff6f99a42
-SHA256 (nftables.conf) = 4d2f8fd036dead63503674cdca3c212e8cf81bf5ae9abb54e7808c521b02fce0
-SHA256 (nftables.finish) = ab2aa5c244e957f429308e722267f95655d15c716436c216977bb12b359e3eb7
-SHA256 (nftables.run) = 00c18977a3dfad7f59a0d419929cfa567fdf1478519197e53b7f79e9cc57cb53
