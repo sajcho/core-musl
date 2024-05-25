@@ -1,7 +1,0 @@
-untrusted comment: verify with core-musl.pub
-RWR3tfW4AteKXD/tOdkbqV084wL1qGIsK5nN5a9Wpib9TAIqCSZXAnGYiP//p3KIen/7SxKrzJt5/A5HPJPSGSBWZXHroJbU8wk=
-SHA256 (Pkgfile) = c7a5d72fa7c24cd8f4c6e9ec0720ffeb0fbbfe2a7107133e1b4d5fda23e54b1d
-SHA256 (.footprint) = d40d0d2ad19e84dc45e778f123171e59163826cb42ea8af31c087db28249ab5d
-SHA256 (eudev-3.2.14.tar.gz) = 8da4319102f24abbf7fff5ce9c416af848df163b29590e666d334cc1927f006f
-SHA256 (50-firmware.rules) = 37895a6ae81ab0e8753eb97a7c11b7cf578549e06fbbf2d6b192d109bc2cd9a3
-SHA256 (udevd.run) = 78bca25f04b157d6997c6480de9a23d2a65284b3362f20338b23455b9ec1214f
