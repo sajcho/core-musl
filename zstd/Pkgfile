@@ -1,0 +1,38 @@
+# Description:	Zstandard - Fast real-time compression algorithm
+# URL:		https://www.zstd.net/
+# Maintainer:	sajcho, saux dot aarch64 at gmail dot com
+# Depends on:	grep meson
+
+name=zstd
+version=1.5.6
+release=1
+source=(https://github.com/facebook/zstd/archive/v${version}/${name}-${version}.tar.gz \
+	disable-warning-decompression-multi-thread.patch)
+
+build() {
+	cd ${name}-${version}
+
+	patch -p1 -i $SRC/disable-warning-decompression-multi-thread.patch
+
+	export CFLAGS="${CFLAGS/-O2/-O3}"
+	export CXXFLAGS="${CXXFLAGS/-O2/-O3}"
+	export CPPFLAGS="${CPPFLAGS/-O2/-O3}"
+
+	cd build/meson
+
+	build-meson \
+		--default-library=both \
+		-Dbin_contrib=true \
+		-Dbin_programs=true \
+		-Dbin_tests=false \
+		-Dmulti_thread=enabled \
+		-Dbacktrace=disabled \
+		-Dlz4=disabled \
+		-Dlzma=disabled \
+		-Dzlib=disabled \
+		. build
+
+	meson compile ${JOBS:+-j ${JOBS}} -v -C build
+
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
