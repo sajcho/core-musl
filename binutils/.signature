@@ -1,0 +1,7 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXMkt/LbOZ68Kj1IuKOPKqu4kSpDEGdnMzAGSCsTZOB7nhqG9NvWwE4tJgHaFOHjx/txDtcnKpgbfRV+U06sAUQ4=
+SHA256 (Pkgfile) = 0639da3cb6f2ddc858e9b092b7a4e8affaa74773ece64865542f6678e6fc905c
+SHA256 (.footprint) = 9e472f8c58e1041b66ac48de60b5a6008e948254178d394d507ea315b2fb34b2
+SHA256 (binutils-2.42.tar.xz) = f6e4d41fd5fc778b06b7891457b3620da5ecea1006c6a4a41ae998109f85a800
+SHA256 (0001-Revert-PR25882-.gnu.attributes-are-not-checked-for-s.patch) = faba7b07cf02de228fa383bcaca339f8e7b70dec10ee3a5e08af5a8b82bc2ae6
+SHA256 (binutils-ld-fix-static-linking.patch) = d5c5581d0ba04ef2e3690f6fb57435bf7ce343f2376fe972a2a693c5429eec9c

@@ -1,0 +1,50 @@
+# Description:	Very high-quality data compression program
+# URL:		https://sourceware.org/bzip2/
+# Maintainer:	sajcho, saux dot aarch64 at gmail dot com
+
+name=bzip2
+version=1.0.8
+release=1
+source=(https://sourceware.org/pub/bzip2/${name}-${version}.tar.gz \
+	bzip2-1.0.2-progress.patch \
+	bzip2-1.0.3-no-test.patch \
+	bzip2-1.0.4-makefile-CFLAGS.patch \
+	bzip2-1.0.4-man-links.patch \
+	saneso.patch \
+	bzip2.pc.in)
+
+build() {
+	cd ${name}-${version}
+
+	patch -p1 -i $SRC/bzip2-1.0.2-progress.patch
+	patch -p1 -i $SRC/bzip2-1.0.3-no-test.patch
+	patch -p1 -i $SRC/bzip2-1.0.4-makefile-CFLAGS.patch
+	patch -p1 -i $SRC/bzip2-1.0.4-man-links.patch
+	patch -p1 -i $SRC/saneso.patch
+
+	# Fix man path
+	# Generate relative symlinks
+	sed -i \
+		-e 's:\$(PREFIX)/man:\$(PREFIX)/share/man:g' \
+		-e 's:ln -s -f $(PREFIX)/bin/:ln -s :' \
+		Makefile
+
+	# fixup broken version stuff
+	sed -i \
+		-e "s:1\.0\.4:$pkgver:" \
+		bzip2.1 bzip2.txt Makefile-libbz2_so manual.*
+
+	make -f Makefile-libbz2_so all
+	make all
+
+	make PREFIX=$PKG/usr install
+
+	install -D libbz2.so.${version} $PKG/usr/lib/libbz2.so.${version}
+	ln -s libbz2.so.${version} $PKG/usr/lib/libbz2.so
+	ln -s libbz2.so.${version} $PKG/usr/lib/libbz2.so.1
+	ln -s libbz2.so.${version} $PKG/usr/lib/libbz2.so.1.0
+
+	install -d $PKG/usr/lib/pkgconfig
+	sed "s|@VERSION@|${version}|" $SRC/bzip2.pc.in \
+	> $PKG/usr/lib/pkgconfig/bzip2.pc
+}

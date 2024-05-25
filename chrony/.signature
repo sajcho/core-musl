@@ -1,0 +1,8 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXG9Zphz11FjntLojZwmpdTjjKFrNoK3ZQ7RJxYIHm3cU8IB0Jj8dwOgXpCKDZidKHTOzMoJrD21/8Jv1XO283gE=
+SHA256 (Pkgfile) = ceab2517feed39f6da872ca3c35ea27cc1a4c14a6ba37bc50a6bbd851aa5cb79
+SHA256 (.footprint) = fe7888fefeba54f7ab17ed50e722768e534c70e05815a6a8a50a6b213a3be6f7
+SHA256 (chrony-4.5.tar.gz) = 19fe1d9f4664d445a69a96c71e8fdb60bcd8df24c73d1386e02287f7366ad422
+SHA256 (chrony.conf) = 12d01764ef3aceeab18703632d18429cb524ea31a06498773df2e1eb6692c8bc
+SHA256 (chrony.run) = 509963db30dabda395c03a95eef02290296426486284eb5c1b99cd638610ee5a
+SHA256 (chrony.run.conf) = a59d3bf179a0aad0a2e3620a13714cc3b7f7ef0b80cef07340a4be4fbd38e11a
