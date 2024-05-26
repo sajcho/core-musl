@@ -16,9 +16,6 @@ build() {
 	patch -p1 -i $SRC/0001-Revert-PR25882-.gnu.attributes-are-not-checked-for-s.patch
 	patch -p1 -i $SRC/binutils-ld-fix-static-linking.patch
 
-	export CFLAGS+=" -flto=auto -ffat-lto-objects"
-	export CXXFLAGS+=" -flto=auto -ffat-lto-objects"
-
 	mkdir build
 	cd build
 
