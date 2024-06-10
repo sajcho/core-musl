@@ -552,6 +552,7 @@ drwxr-xr-x	root/root	usr/share/vim/ftplugin/
 -rw-r--r--	root/root	usr/share/vim/ftplugin/kconfig.vim
 -rw-r--r--	root/root	usr/share/vim/ftplugin/kotlin.vim
 -rw-r--r--	root/root	usr/share/vim/ftplugin/kwt.vim
+-rw-r--r--	root/root	usr/share/vim/ftplugin/lc.vim
 -rw-r--r--	root/root	usr/share/vim/ftplugin/ld.vim
 -rw-r--r--	root/root	usr/share/vim/ftplugin/less.vim
 -rw-r--r--	root/root	usr/share/vim/ftplugin/lftp.vim
@@ -642,6 +643,7 @@ drwxr-xr-x	root/root	usr/share/vim/ftplugin/
 -rw-r--r--	root/root	usr/share/vim/ftplugin/racc.vim
 -rw-r--r--	root/root	usr/share/vim/ftplugin/racket.vim
 -rw-r--r--	root/root	usr/share/vim/ftplugin/raku.vim
+-rw-r--r--	root/root	usr/share/vim/ftplugin/rasi.vim
 -rw-r--r--	root/root	usr/share/vim/ftplugin/readline.vim
 -rw-r--r--	root/root	usr/share/vim/ftplugin/registry.vim
 -rw-r--r--	root/root	usr/share/vim/ftplugin/requirements.vim
@@ -754,7 +756,6 @@ drwxr-xr-x	root/root	usr/share/vim/indent/
 -rw-r--r--	root/root	usr/share/vim/indent/ada.vim
 -rw-r--r--	root/root	usr/share/vim/indent/ant.vim
 -rw-r--r--	root/root	usr/share/vim/indent/arduino.vim
--rw-r--r--	root/root	usr/share/vim/indent/asm.vim
 -rw-r--r--	root/root	usr/share/vim/indent/astro.vim
 -rw-r--r--	root/root	usr/share/vim/indent/automake.vim
 -rw-r--r--	root/root	usr/share/vim/indent/awk.vim
@@ -1532,6 +1533,7 @@ drwxr-xr-x	root/root	usr/share/vim/syntax/modula2/opt/
 -rw-r--r--	root/root	usr/share/vim/syntax/raku.vim
 -rw-r--r--	root/root	usr/share/vim/syntax/raml.vim
 -rw-r--r--	root/root	usr/share/vim/syntax/rapid.vim
+-rw-r--r--	root/root	usr/share/vim/syntax/rasi.vim
 -rw-r--r--	root/root	usr/share/vim/syntax/ratpoison.vim
 -rw-r--r--	root/root	usr/share/vim/syntax/rc.vim
 -rw-r--r--	root/root	usr/share/vim/syntax/rcs.vim
