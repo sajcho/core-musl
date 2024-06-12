@@ -1,8 +1,0 @@
-untrusted comment: verify with core-musl.pub
-RWR3tfW4AteKXC7GapeYmWU7Ip6C6pSbc5ryVNMS2oOc3BAC106cejsRxZbVp83ochWvhIliGHjOTaiPkd8W+q+Z9TjqPHVKGg4=
-SHA256 (Pkgfile) = 6229e38f6bae10cf878f4e331d861d51c045cf8611ac9cdf7e38062fbde7e4c5
-SHA256 (.footprint) = 5e1cba6d431ebc553558f13662f0d6d899aa7c373a9bdf1acfc1e42fe26fc6ce
-SHA256 (fcron-3.3.1.src.tar.gz) = f359daa08a63ddfb7fe2f964bb3f5c52244c25aa36f9225a3cc54d36f4681106
-SHA256 (fcron.run) = c6eedc833799bc2139c3fc6a196cf8efccbfa86eb4f49fc515f38b3cb0b03258
-SHA256 (runjobs) = c861105f2b04ad07cade83f3677fd261ae96ad2ef22a27e21e5490b97eecee4b
-SHA256 (systab.orig) = 768de3cddf3dee50a80a154282a9efa9195dfd60fdb0ba2a0ac4401ac7a9eb69

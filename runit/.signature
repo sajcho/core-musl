@@ -1,8 +1,0 @@
-untrusted comment: verify with core-musl.pub
-RWR3tfW4AteKXMZi2iNbtJ92/4824amj/qX3WSRCq4b25hUGxLx77kRKifHt4qW7A0GTlpiSirAB+fwdMDNCKHnDO03h3Z6ODww=
-SHA256 (Pkgfile) = 885000d65dbae61beab575997293bb2903776d24046277f145dce5e8228fb1a6
-SHA256 (.footprint) = 9f8023c1392a46edb594a2618db6c7f43d07b28ccb9cd710d5fce71dd58164a2
-SHA256 (runit-2.1.2.tar.gz) = 6fd0160cb0cf1207de4e66754b6d39750cff14bb0aa66ab49490992c0c47ba18
-SHA256 (runit-patchset-by-saux.patch) = 7631497029ecaebe2cac62709014c9415db622a3d9b39ad4a4e0a55319030439
-SHA256 (_sv) = 2baedf6b7a9f21f58abfc82b80167511ce5600eecce3853893a5c2d112560ab3
-SHA256 (sv) = b7acd9510eba7929ac359fa45da0317babf8d9da19f4650d048845eb4b39421d

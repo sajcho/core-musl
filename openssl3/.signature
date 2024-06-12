@@ -1,6 +1,0 @@
-untrusted comment: verify with core-musl.pub
-RWR3tfW4AteKXCCRRq9jFGIDMm6oApVbswP8qGsI/GDeLUy/ClPdqOxLEs0kRvl8cC4VPGj0Ngci+9xE7EjefyB6Lfm/oZEFYAA=
-SHA256 (Pkgfile) = c16405dbe8d70112eea5b5af355cbe24bf432a408034eabcf8c248ca486b013e
-SHA256 (.footprint) = 1434a2ec865807fecd08f202131d3cfacc83218fe1ba6c3532624a05007d2d61
-SHA256 (openssl-3.3.1.tar.gz) = 777cd596284c883375a2a7a11bf5d2786fc5413255efab20c50d6ffe6d020b7e
-SHA256 (mksslcert.sh) = d01cfd061b792f4f7444429582c5c9e83aaa7fc63cafd05669fd3f2970dff779

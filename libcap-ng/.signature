@@ -1,6 +1,0 @@
-untrusted comment: verify with core-musl.pub
-RWR3tfW4AteKXKgr06HTuzaWVq3MQmuoLsKMePEAe2qMjLY+jj4HjKv5m1jT8JQ1qu5EkTG1FrWJx5433mDHrz/MfmjWgsYCNwQ=
-SHA256 (Pkgfile) = 06bb4bdbc5ed95d6539f905214f2e6cd0fec8b7e85d027dfecbeb00cddc1f129
-SHA256 (.footprint) = c81eb06ab984dc77a30aef48d079eb90024ab6faa99d6238ebee8f40019c75ee
-SHA256 (libcap-ng-0.8.5.tar.gz) = 3ba5294d1cbdfa98afaacfbc00b6af9ed2b83e8a21817185dfd844cc8c7ac6ff
-SHA256 (apply-disable.patch) = ea03209a708ff2ddcbcf158d377e7416a83d21eb3c4d5be4347ecd6cf892f92d
