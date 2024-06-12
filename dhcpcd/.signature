@@ -1,0 +1,7 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXH6IqkF3L1a1Xu5hEQqZYKntdrozTnR3p8JcuUt4oNLXz3FQVAWPhNMGjUvU7nDIDbs0bc6SKUK3DfT2PtCWQAI=
+SHA256 (Pkgfile) = 7a2d92bcb5c49707586c71f65a260bb9f61349d28fb0aeaa12caa4a0e2439a06
+SHA256 (.footprint) = 3f933db61b1fb61b50336a3dc96b563ee581a63c2ee9edd552390477c69c9065
+SHA256 (dhcpcd-10.0.8.tar.xz) = d8dddf9f971a8d9ff828f33d8fa9f6d9a892a4a1429d230e9efb2be97dd0e313
+SHA256 (dhcpcd-sv.conf) = c05b5aa649aaf8231ddea72b10be813b8573828b9274fc3784ed083809026c2e
+SHA256 (dhcpcd.run) = 159f3c58e18a92c7caf8c76111938ef943c1dfb4366928226b47e730b7d9bdb4

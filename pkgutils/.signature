@@ -1,0 +1,6 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXOPiszoW1XBcnIAApiuzJnrtG+S+5E6HnKQclYCb9UCO2VMSPbnw+K+ELxj2AhQqqsqRc5KxcZzhTR2fQIikfgc=
+SHA256 (Pkgfile) = d1223c79c3a1613e5154f427adddbe097b46d1336deed96d280ab4ada656a97e
+SHA256 (.footprint) = 7d143f18f63bba5569d729eefd0d0f04ae4b0539f8bd71f9cfd6955b9e7c639d
+SHA256 (pkgutils-5.40.10.tar.xz) = 2d86335be3d0452dcc7ae5f568e7296cd7ea80117f57646d15420a6dc192f174
+SHA256 (pkgutils-5.40.10-by-saux.patch) = f88daaa3fe06fdcc02efdfb461bc31832e618600f31178a7efaaca386bec5d3f

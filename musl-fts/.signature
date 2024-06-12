@@ -1,0 +1,5 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXBmyNcSiQHuq5YJ0ktLXHm31UgjJiu0aXwCe8/PNbs0xHbUNEUSakJyy4SEo8DBCNfRj5s2vRksNEnCekCp/KAM=
+SHA256 (Pkgfile) = 1144a955a22040370faf5d30d087871121c055c667b75c4ed24bb0b7173d80db
+SHA256 (.footprint) = ddc5a1a9bec6d3a2b756c0c817cb7fb85fc74295e4f94b59974a6be2b44624e9
+SHA256 (musl-fts-1.2.7.tar.gz) = 49ae567a96dbab22823d045ffebe0d6b14b9b799925e9ca9274d47d26ff482a6

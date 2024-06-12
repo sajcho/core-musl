@@ -1,0 +1,5 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXF+243jLwMie6J57dhFwsEmQHGZQBgJuXpVcLq9qvuw3up7bvpEsFUNxLL/U60MTIP6HnnpvJxZ54rBUuOAIkA4=
+SHA256 (Pkgfile) = 5b50318b7a5bb87439da82efb33d1b72435e6fdc1ef6685a652320d200fbde56
+SHA256 (.footprint) = cf4e85c2ce9c337ffd51137882030a7e373e613c478762f63910f63b4faae807
+SHA256 (cmake-3.29.3.tar.gz) = 252aee1448d49caa04954fd5e27d189dd51570557313e7b281636716a238bccb

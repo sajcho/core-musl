@@ -1,0 +1,6 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXCAsLSzRkRlcyGnDVj8DfI1oqsdkwzq+CmgKlL/ouLcURqrV5WI3a6oEi8v8wcUx/CStO9MGREdyZwndBT9fOA4=
+SHA256 (Pkgfile) = 2a054a18c5f303339325b101d566103eaf75c80efd09f50c8817b7eea3abb1d5
+SHA256 (.footprint) = 7e6616a8e16a3e1de6831f8f56efff956fb49b0a80c80f537af2af8805baf0d4
+SHA256 (zstd-1.5.6.tar.gz) = 30f35f71c1203369dc979ecde0400ffea93c27391bfd2ac5a9715d2173d92ff7
+SHA256 (disable-warning-decompression-multi-thread.patch) = bcf4d000d85240d8d2693438855ac218a1f93c56b63bfb6be9e5598206b5cd73

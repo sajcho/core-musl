@@ -1,0 +1,8 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXGSiAa7i3k3RgbpiIpnh36KwB8w+lplRQmN8vKI9R39fRkUHjxq6uF7nhYdfOyUtNzCznyEDtqGHRcF+FhWUNQM=
+SHA256 (Pkgfile) = 5f1a31f8d868b6403632395bf9a50ded3f98c6884229ff02a822e252eaad7785
+SHA256 (.footprint) = 9a36be18f29307db9bfad99ab7bd2fd07b8342b935406bc89b7bde8f804292b6
+SHA256 (prt-get-5.19.6.tar.xz) = 6ea89df308e19a6239f260c91036805cd2063d0cd24a7427235849634dd49f0d
+SHA256 (prt-get-5.19.6-by-saux.patch) = bcf7cd492c86374e25a163b215bc867651273a505b4e3e7ee5d53d404268410d
+SHA256 (prt-get.conf) = 3e6977e578b50b674537791cfdf001cfa21ef5f294e6c257935611dc9b2f45e8
+SHA256 (prt-get.aliases) = be48aa36a869d5acb10bbc66faadaeb5906bdaa4005dda7e2170931bc5c5d573

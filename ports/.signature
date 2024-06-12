@@ -1,0 +1,11 @@
+untrusted comment: verify with core-musl.pub
+RWR3tfW4AteKXLhhtslzSJwY8/7jzY0jrSZdbK8KoN1LktavBrPnQ+79M5+sGCXZfHjYnHPU0uRwoJ64EaCa78qXFwH48XrvdwE=
+SHA256 (Pkgfile) = 8493d8b315aafc765649a10c49d2b83cc986741bb610cb61c70f9ab4c2f131ac
+SHA256 (.footprint) = bb8506a4e094eff40cd6c532c15091c9c8fd96a0862bed1c8c6c29d4d1012918
+SHA256 (ports-1.6.tar.gz) = 8b2ba48e7440f4a71fa1c9c480a1212ce87c623e1d33121eb660829ba294ca94
+SHA256 (core-musl.httpup) = 18860fc5860a3b0c36c2db997e14b8eba8793cb4965e392288e178089bf6a806
+SHA256 (core-musl.pub) = 8cfaa4997efaa79f661d32ea9398298c4034936d23a8c61bbc57cbe4d26a2a1c
+SHA256 (opt-musl.httpup) = 874f0a1a3070ff0ca9559c8bf42f772b95dc286dd5d876027637bf169cdce29f
+SHA256 (opt-musl.pub) = 366965ab18a08ad3b90f3b714234d84a373f567e8cd236ddeff805d5238d56d0
+SHA256 (wayland-musl.httpup) = 41171646c3ddfc3cd235a3fb7d42fcf137b401bfb0355e148b55c24b9928c835
+SHA256 (wayland-musl.pub) = b101a2c49ce3cd37e63e5689faef4a35a5c96d89b6758f95f9d9b3d5f4101c34
