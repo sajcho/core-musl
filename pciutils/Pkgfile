@@ -4,16 +4,19 @@
 # Depends on:	eudev
 
 name=pciutils
-version=3.12.0
+version=3.13.0
 release=1
 source=(https://www.kernel.org/pub/software/utils/pciutils/${name}-${version}.tar.xz \
-	basename.patch \
-	update-pciids.sh)
+	basename.patch)
 
 build() {
 	cd ${name}-${version}
 
 	patch -p1 -i $SRC/basename.patch
+
+	# Prevent the installation of the pci.ids file to avoid a conflict with the hwdata port:
+	sed -r '/INSTALL/{/PCI_IDS|update-pciids /d; s/update-pciids.8//}' \
+		-i Makefile
 
 	make V=1 -j1 \
 		PREFIX=/usr \
@@ -33,7 +36,4 @@ build() {
 		DESTDIR=$PKG install install-lib
 
 	chmod  0755 $PKG/usr/lib/libpci.so
-
-	install -D -m 0754 $SRC/update-pciids.sh \
-		$PKG/etc/cron/weekly/update-pciids.sh
 }
