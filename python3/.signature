@@ -1,5 +1,5 @@
 untrusted comment: verify with core-musl.pub
-RWR3tfW4AteKXOGmqdWiCsK61i1Evtqt3ldP+Z53V7c8/zabtgLA9ym7RuX5bLkYS/8rKmi/dSPdC+MeABiXa+WWOKwnImUu9gU=
-SHA256 (Pkgfile) = d49d2ca5c3519792e7a8b6c32735063cbb73bd5e793ca2231e18b9a78430cf40
-SHA256 (.footprint) = f29c58f7239077d0d4ee4ec3df9f39180875132c1b64ba402ac25c542eef2e34
-SHA256 (Python-3.12.3.tar.xz) = 56bfef1fdfc1221ce6720e43a661e3eb41785dd914ce99698d8c7896af4bdaa1
+RWR3tfW4AteKXO2DPSb8oCBxbtFATJ8dtiEZdHj5rkk3cP0sEtPBNl65gVVS+/fIKkzWyj6TA8br9y+88cMbzsYVm3m73Xf3HQs=
+SHA256 (Pkgfile) = dfc3ffef6113dd2db4b7452d8e81a3fcd345ad6022f01f83c9fc0821b2dda4bc
+SHA256 (.footprint) = 64c1068b0b68fc5576c9caaebb3c22946f821f9476b007b102d14f3ee681bfe7
+SHA256 (Python-3.12.4.tar.xz) = f6d419a6d8743ab26700801b4908d26d97e8b986e14f95de31b32de2b0e79554
